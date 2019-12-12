@@ -5,3 +5,5 @@ whoosh_index/
 requirements.txt
 
 .gitattributes
+
+.gitignore
