@@ -1,0 +1,106 @@
+{% extends 'cms/base.html' %}
+
+{% block title %}
+标签详情
+{% endblock %}
+
+{% block head %}
+    <style>
+    span.btn{
+        border-radius: 20px;
+        background: #fff;
+        display: inline-block;
+    }
+    .tag {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 34px;
+    }
+    </style>
+    <script type="text/html" id="tag-default">
+    {% verbatim %}
+        <tr data-tag-id="{{ tag.id }}">
+            <td>
+                <span class="tag">{{ tag.name }}</span>
+            </td>
+            <td>
+                <button class="edit-btn btn btn-warning btn-sm">编辑</button>
+                <button class="delete-btn btn btn-danger btn-sm">删除</button>
+            </td>
+        </tr>
+    {% endverbatim %}
+    </script>
+    <script type="text/html" id="add-tag">
+    {% verbatim %}
+        <tr>
+            <td>
+                <input class="form-control" name="name" type="text">
+            </td>
+            <td>
+                <button class="add-submit btn btn-success btn-sm">保存</button>
+                <button class="add-cancel btn btn-warning btn-sm">取消</button>
+            </td>
+        </tr>
+    {% endverbatim %}
+    </script>
+    <script type="text/html" id="edit-tag">
+    {% verbatim %}
+        <tr data-tag-id="{{ tag.id }}">
+            <td>
+                <input class="form-control" type="text" name="name" value="{{ tag.name }}">
+            </td>
+            <td>
+                <button class="edit-submit btn btn-success btn-sm">保存</button>
+                <button class="edit-cancel btn btn-default btn-sm">取消</button>
+                <span class="text-danger">正在编辑：{{ tag.name }}</span>
+            </td>
+        </tr>
+    {% endverbatim %}
+    </script>
+    <script src="{% static 'arttemplate/template-web.js' %}"></script>
+    <script src="{% static 'js/cms/tag_detail.min.js' %}"></script>
+{% endblock %}
+
+{% block content-header %}
+    <h1>编辑标签</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    {# 返回 #}
+                    <a href="{% url 'cms:tag_list' %}" class="btn btn-default"><< 返回</a>
+                    <span style="margin-left:50px;">
+                        类别：
+                        {% if category %}
+                            {{ category.name }}
+                        {% else %}
+                            通用
+                        {% endif %}</span>
+                    <a href="#" class="add-btn btn btn-info btn-sm pull-right">
+                        <i class="iconfont icon-add" style="font-size: 15px;"></i>
+                        添加标签
+                    </a>
+                </div>
+                <div class="box-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="col-md-8">标签</th>
+                                <th class="col-md-4">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody data-cate-id="{{ category.id }}">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

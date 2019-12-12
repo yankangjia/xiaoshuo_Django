@@ -1,0 +1,122 @@
+{% extends 'cms/base.html' %}
+{% load author_filter %}
+
+{% block title %}
+{{ novel.name }}|所有章节
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'adminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css' %}">
+    <script src="{% static 'adminLTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'adminLTE/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js' %}"></script>
+    <script src="{% static 'js/cms/chapter_list.min.js' %}"></script>
+    <style>
+    .back-btn{
+        margin-right: 40px;
+    }
+    .submit-btn{
+        margin-left: 15px;
+    }
+    .clear{
+        margin-left: 30px;
+    }
+    </style>
+{% endblock %}
+
+{% block content-header %}
+<h1>{{ novel.name }} · 所有章节</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header">
+                {# 搜索条件 #}
+                <form action="" method="get" class="form-inline">
+                    {% csrf_token %}
+                    {# 返回 #}
+                    <a href="{% url 'cms:novel_list' %}" class="back-btn btn btn-default"><< 返回</a>
+                    <div class="form-group left-group">
+                        <input type="hidden" name="novel_id" value="{{ novel.id }}">
+                        <label>时间：</label>
+                        <input type="text" name="start" id="start-picker" placeholder="起始时间" class="form-control" value="{{ start }}" readonly>
+                        <span> - </span>
+                        <input type="text" name="end" id="end-picker" placeholder="结束时间" class="form-control" value="{{ end }}" readonly>
+                    </div>
+                    <div class="form-group left-group">
+                        <label for="title-input">标题：</label>
+                        <input type="text" id="title-input" name="title" class="form-control" value="{{ title }}">
+                    </div>
+                    <div class="form-group left-group">
+                        <button class="submit-btn btn btn-primary">查询</button>
+                    </div>
+                    <div class="form-group">
+                        <a href="{% url 'cms:chapter_list' %}?novel_id={{ novel.id }}" class="clear">清除查询</a>
+                    </div>
+                </form>
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>章节</th>
+                            <th>标题</th>
+                            <th>发布时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for chapter in chapters %}
+                            <tr>
+                                <td>第{{ chapter.number }}章</td>
+                                <td>
+                                    <a href="{% url 'novel:chapter' chapter_id=chapter.id %}" target="_blank">
+                                        {{ chapter.title }}
+                                    </a>
+                                </td>
+                                <td>{{ chapter.pub_date|time_format }}</td>
+                                <td>
+                                    <a href="{% url 'cms:edit_chapter' %}?chapter_id={{ chapter.id }}"  class="btn btn-warning btn-xs">编辑</a>
+                                    <button class="btn btn-danger btn-xs delete-btn" data-chapter-id="{{ chapter.pk }}">删除</button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="box-footer">
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    {% if page_obj.has_previous %}
+                        <li><a href="{% url 'account:chapter_list' %}?p={{ page_obj.previous_page_number }}{{ url_query }}">«</a></li>
+                    {% else %}
+                        <li class="disabled"><a href="javascript:void(0);">«</a></li>
+                    {% endif %}
+                    {% if left_has_more %}
+                        <li><a href="{% url 'account:chapter_list' %}{{ url_query }}">1</a></li>
+                        <li><a href="javascript:void(0);" style="cursor:default;">...</a></li>
+                    {% else %}
+                        {% for left_page in left_pages %}
+                            <li><a href="{% url 'account:chapter_list' %}?p={{ left_page }}{{ url_query }}">{{ left_page }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                    <li class="active"><a href="#">{{ current_page }}</a></li>
+                    {% if right_has_more %}
+                        <li><a href="javascript:void(0);" style="cursor:default;">...</a></li>
+                        <li><a href="{% url 'account:chapter_list' %}?p={{ paginator.num_pages }}{{ url_query }}">{{ paginator.num_pages }}</a></li>
+                    {% else %}
+                        {% for right_page in right_pages %}
+                            <li><a href="{% url 'account:chapter_list' %}?p={{ right_page }}{{ url_query }}">{{ right_page }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                        <li><a href="{% url 'account:chapter_list' %}?p={{ page_obj.next_page_number }}{{ url_query }}">»</a></li>
+                    {% else %}
+                        <li class="disabled"><a href="javascript:void(0)">»</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

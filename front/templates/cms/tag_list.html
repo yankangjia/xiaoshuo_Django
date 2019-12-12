@@ -1,0 +1,74 @@
+{% extends 'cms/base.html' %}
+
+{% block head %}
+<style>
+span.btn{
+    border-radius: 20px;
+    background: #fff;
+    display: inline-block;
+}
+</style>
+{% endblock %}
+
+{% block title %}
+标签列表
+{% endblock %}
+
+{% block content-header %}
+    <h1 class="">所有分类</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header">
+                <a href="{% url 'cms:category_list' %}" class="btn btn-primary pull-right">添加类别</a>
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>类别</th>
+                            <th>标签</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="text-warning">通用</span></td>
+                            <td>
+                                {% for tag in common_tags %}
+                                    <span class="btn btn-default btn-sm">{{ tag.name }}</span>
+                                {% endfor %}
+                            </td>
+                            <td>
+                                <a href="{% url 'cms:tag_detail' %}" class="btn btn-warning btn-sm">编辑</a>
+                                <a href="#" class="btn btn-danger btn-sm">删除</a>
+                            </td>
+                        </tr>
+                        {% for cate_tag in cate_tags %}
+                            <tr>
+                                <td><span class="text-warning">{{ cate_tag.name }}</span></td>
+                                <td>
+                                    {% for tag in cate_tag.tags.all %}
+                                        <span class="btn btn-default btn-sm">{{ tag.name }}</span>
+                                    {% endfor %}
+                                </td>
+                                <td>
+                                    <a href="{% url 'cms:tag_detail' %}?category_id={{ cate_tag.id }}" class="btn btn-warning btn-sm">编辑</a>
+                                    <a href="#" class="btn btn-danger btn-sm">删除</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="box-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

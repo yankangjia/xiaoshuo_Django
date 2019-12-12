@@ -1,0 +1,54 @@
+{% extends 'author/base.html' %}
+
+
+{% block title %}
+    {% if chapter %}
+        编辑小说
+    {% else %}
+        发布小说
+    {% endif %}
+{% endblock %}
+
+{% block head %}
+{#    <script src="https://unpkg.com/qiniu-js@2.5.2/dist/qiniu.min.js"></script>#}
+    <script src={% static 'js/account/write_chapter.min.js' %}></script>
+    <script src={% static 'ueditor/ueditor.config.js' %}></script>
+    <script src={% static 'ueditor/ueditor.all.min.js' %}></script>
+{% endblock %}
+
+{% block content-header %}
+    {% if chapter %}
+        <h1>编辑小说</h1>
+    {% else %}
+        <h1>发布小说</h1>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <form action="" role="form">
+                    <div class="box-header">
+                        <h3>{{ novel.name }}·第<span id="number">{{ novel.chapters_num|add:1 }}</span>章</h3>
+                    </div>
+                    <div class="box-body">
+                        {# 标题 #}
+                        <div class="form-group">
+                            <label for="title-form">标题</label>
+                            <input type="text" class="form-control" id="title-form" name="title" value="{{ chapter.title }}">
+                        </div>
+                        {# 内容 #}
+                        <div class="form-group">
+                            <label for="desc-form">内容</label>
+                            <script id="editor" type="text/plain">{{ chapter.content|safe }}</script>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button id="submit-btn" class="btn btn-primary fa-pull-right" data-novel-id="{{ novel.pk }}" data-chapter-id="{{ chapter.pk }}">发布</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

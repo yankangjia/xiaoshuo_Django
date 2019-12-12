@@ -1,0 +1,250 @@
+{% load novel_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf_token" comtent="{{ csrf_token }}">
+    <title>{{ category_cn_name }}首页</title>
+    <link rel="icon" type="image/x-ico" href="{% static 'images/logo.ico' %}" />
+    <link rel="stylesheet" href="{% static 'css/novel/index_category.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common/auth.min.css' %}">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1538834_3o3u75p68n8.css">
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/myajax.min.js' %}"></script>
+    <script src="{% static 'js/xfzalert.min.js' %}"></script>
+    <script src="{% static 'js/message.min.js' %}"></script>
+    <script src="{% static 'js/auth.min.js' %}"></script>
+    <script src="{% static 'js/search.min.js' %}"></script>
+</head>
+<body>
+<header>
+    <div class="header-top">
+        {% include 'base/black_header.html' %}
+    </div>
+    <div class="header-middle {{ category_en_name }}">
+        <div class="middle-container">
+            <div class="logo">
+                <a href="#"></a>
+            </div>
+            <form action="/search/">
+                {% csrf_token %}
+                <input type="text" name="q" id="search-text">
+                <span class="search-btn iconfont icon-baseline-search-px"></span>
+                <input type="submit" id="search-submit" hidden>
+            </form>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="wrapper">
+        <!-- 第一部分 -->
+        <!-- 第二部分 推荐 新书 -->
+        <div class="recommend-wrapper">
+            <div class="left">
+                <!-- 标签 -->
+                <div class="category-tag">
+                    <ul>
+                        {% for tag in tags %}
+                            <li><a href="#">{{ tag.name }}</a></li>
+                        {% endfor %}
+                        <b>|</b>
+                        <li><a href="{% url 'novel:rank' %}?category_id={{ category.pk }}">{{ category.name }}排行</a></li>
+                        <li><a href="{% url 'novel:whole' %}?category_id={{ category.pk }}&is_complete=1">{{ category.name }}完本</a></li>
+                        <li><a href="{% url 'novel:whole' %}?category_id={{ category.pk }}&is_free=1">{{ category.name }}免费</a></li>
+                    </ul>
+                </div>
+                <div class="body">
+                    <!-- 本周强推 -->
+                    <div class="recommend-left">
+                        <div class="left-header">
+                            <h3>本周强推</h3>
+                        </div>
+                        <ul>
+                            {% for novel in recommend_novels|slice:'5:15' %}
+                                <li>
+                                    <span class="novel-name"><a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name|truncate:9 }}</a></span>
+                                    <span class="novel-author"><a href="#">{{ novel.author.pen_name }}</a></span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- 编辑推荐 -->
+                    <div class="recommend-body">
+                        <!-- 上 -->
+                        <div class="novel-media">
+                            <ul>
+                                {% for novel in recommend_novels|slice:'0:4' %}
+                                    <li>
+                                        <div class="novel-img">
+                                            <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">
+                                                <img src="{{ novel.cover_url }}" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="novel-info">
+                                            <div class="novel-title">
+                                                <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name }}</a>
+                                            </div>
+                                            <div class="novel-profile">
+                                                {{ novel.profile|striptags|strip|truncatechars:'25' }}
+                                            </div>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- 下 -->
+                        <div class="novel-text">
+                            <div class="hint">
+                                <span>新书精选</span>
+                                <cite></cite>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="novel-name">科技巫师</span><i>·</i><span class="novel-profile">在巫师世界自造核武器</span>
+                                </li>
+                                <li>
+                                    <span class="novel-name">我有一个庇护所</span><i>·</i><span class="novel-profile">灰雾世界唯一的秩序</span>
+                                </li>
+                                <li>
+                                    <span class="novel-name">绝境长城上的王者</span><i>·</i><span class="novel-profile">穿越冰与火，却被守夜人抓了壮丁</span>
+                                </li>
+                                <li>
+                                    <span class="novel-name">哈利波特之血猎者</span><i>·</i><span class="novel-profile">布劳德重生到了哈利波特的世界</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 排行榜 -->
+            <div class="rank">
+                <div class="rank-header">
+                    <h2>{{ category_cn_name }}·排行榜</h2>
+                </div>
+                    {% if rank_novels %}
+                        <ul>
+                            {% with rank_novels.0 as novel %}
+                                <li class="unfold">
+                                    <div class="novel-info-box">
+                                        <span class="novel-1">NO.1</span>
+                                        <span class="novel-name">
+                                            <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name }}</a>
+                                        </span>
+                                        <p class="novel-author">
+                                            <a href="#">{{ novel.category.name }}</a><i>·</i><a href="#">{{ novel.author.pen_name }}</a>
+                                        </p>
+                                    </div>
+                                    <div class="novel-img-box">
+                                        <a href="{% url 'novel:detail' novel_id=novel.id %}">
+                                            <img src="https://bookcover.yuewen.com/qdbimg/349573/1016811796/90" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                            {% endwith %}
+                        {% for novel in rank_novels|slice:'1:10' %}
+                            <li>
+                                <div class="num-box">
+                                    {% if forloop == 1 %}
+                                        <span class="num-2">2</span>
+                                    {% elif forloop == 2 %}
+                                        <span class="num-3">3</span>
+                                    {% else %}
+                                        <span>{{ forloop.counter|add:1 }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="novel-box">
+                                    <span class="novel-name"><a href="{% url 'novel:detail' novel_id=novel.id %}">{{ novel.name }}</a></span>
+                                    <span class="novel-author"><a href="#">{{ novel.author.pen_name }}</a></span>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+        <!-- 第三部分 新书推荐 -->
+        <div class="new-novel">
+            <div class="new-left">
+                <div class="rank-header">
+                    <h2>{{ category_cn_name }}新书</h2>
+                </div>
+                <div class="novel-media">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <ul>
+                        {% for novel in new_novels|slice:'10:22' %}
+                            <li>
+                                <div class="novel-img">
+                                    <a href="{% url 'novel:detail' novel_id=novel.id %}">
+                                        <img src="{{ novel.cover_url }}" alt="">
+                                    </a>
+                                </div>
+                                <div class="novel-info">
+                                    <div class="novel-title">
+                                        <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name }}</a>
+                                    </div>
+                                    <div class="novel-profile">
+                                        {{ novel.profile|striptags|strip|truncatechars:45 }}
+                                    </div>
+                                    <div class="novel-author">
+                                        <a href="#" class="author-name"><span>{{ novel.author.pen_name }}</span></a>
+                                        <span class="nav-number">{{ novel.words_num|words_num_filter }}万字</span>
+                                        <span class="nav-tag">{{ novel.tag.name }}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="new-rank">
+                <div class="rank-header">
+                    <h2>新书榜</h2>
+                </div>
+                {% if new_novels %}
+                    <ul>
+                        {% with new_novels.0 as novel %}
+                            <li class="unfold">
+                                <div class="novel-info-box">
+                                    <span class="novel-1">NO.1</span>
+                                    <span class="novel-name">
+                                        <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name }}</a>
+                                    </span>
+                                    <p class="novel-author">
+                                        <a href="#">{{ novel.category.name }}</a><i>·</i><a href="#">{{ novel.author.pen_name }}</a>
+                                    </p>
+                                </div>
+                                <div class="novel-img-box">
+                                    <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">
+                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1016811796/90" alt="">
+                                    </a>
+                                </div>
+                            </li>
+                        {% endwith %}
+                        {% for novel in new_novels|slice:'1:10' %}
+                            <li>
+                                <div class="num-box">
+                                    {% if forloop.counter == 1 %}
+                                        <span class="num-2">2</span>
+                                    {% elif forloop.counter == 2 %}
+                                        <span class="num-3">3</span>
+                                    {% else %}
+                                        <span class="num-{{ forloop.counter|add:1 }}">{{ forloop.counter|add:1 }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="novel-box">
+                                    <span class="novel-name"><a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name|truncatechars:10 }}</a></span>
+                                    <span class="novel-author"><a href="#">{{ novel.author.pen_name }}</a></span>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'base/footer.html' %}
+{% include 'base/auth.html' %}
+</body>
+</html>

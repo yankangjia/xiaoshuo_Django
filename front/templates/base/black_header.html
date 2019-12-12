@@ -1,0 +1,52 @@
+<div class="header-div">
+    <ul>
+        <li>
+            <a href="/">起点中文网</a>
+            <div class="dropdown">
+                <a href="https://www.qdmm.com/">起点女生网</a>
+                <a href="http://chuangshi.qq.com/">创世中文网</a>
+                <a href="http://yunqi.qq.com/">云起书院</a>
+            </div>
+        </li>
+        {% for cate in category_name|slice:'0:6' %}
+            <li><a href="{% url 'novel:index_category' category_name=cate.0 %}">{{ cate.1 }}</a></li>
+        {% endfor %}
+        <li>
+            <a href="#">更多</a>
+            <div class="dropdown">
+                <a href="{% url 'novel:whole' %}">全部作品</a>
+                {% for cate in category_name|slice:'6:12' %}
+                    <a href="{% url 'novel:index_category' category_name=cate.0 %}">
+                        {{ cate.1 }}
+                    </a>
+                {% endfor %}
+            </div>
+        </li>
+    </ul>
+    <div class="my-book">
+        <a href="{% url 'account:my_collect' %}">
+            <i class="iconfont icon-bookrack"></i>
+            <span>我的书架</span>
+        </a>
+    </div>
+    <div class="auth-group">
+        {% if user.is_authenticated %}
+            <a href="{% url 'account:index' %}">{{ request.user.username }}</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'cms:index' %}">后台管理</a>
+            {% endif %}
+            <a href="{% url 'xsauth:logout' %}">退出</a>
+        {% else %}
+            <a href="javascript:void(0);" class="sign-in">登录</a>
+            <a href="javascript:void(0);" class="sign-up">注册</a>
+        {% endif %}
+    </div>
+    <div class="search">
+        <form action="/search/">
+            {% csrf_token %}
+            <input type="text" id="text" name="q" class="text" placeholder="你的灵兽看起来很好吃">
+            <label class="submit-btn iconfont icon-baseline-search-px" for="submit"></label>
+            <input type="submit" id="submit" hidden>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+{% extends 'base/front_base.html' %}
+{% load novel_filters %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/novel/rank.min.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="wrapper">
+            <!-- 排行榜 -->
+            <div class="rank-wrapper">
+                <div class="rank-header">
+                    <h2>排行榜</h2>
+                    <!-- 分类选择 -->
+                    <ul>
+                    {% if category_id == 0 %}
+                        <li class="active"><a href="{% url 'novel:rank' %}">全部分类</a></li>
+                    {% else %}
+                        <li><a href="{% url 'novel:rank' %}">全部分类</a></li>
+                    {% endif %}
+                        {% for category in categories %}
+                            {% if category.id == category_id %}
+                                <li class="active"><a href="{% url 'novel:rank' %}?category_id={{ category.pk }}">{{ category.name }}</a></li>
+                            {% else %}
+                                <li><a href="{% url 'novel:rank' %}?category_id={{ category.pk }}">{{ category.name }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                        <li><a href="#">轻小说</a></li>
+                    </ul>
+                </div>
+                <div class="rank-body">
+                    {# 该页所有小说 #}
+                    <div class="novel-media">
+                        <ul>
+                            {% for novel in novels %}
+                                <li>
+                                    <div class="novel-img">
+                                        <a href="#">
+                                            <img src="{{ novel.cover_url }}" alt="">
+                                        </a>
+                                        </div>
+                                        <div class="novel-info">
+                                        <div class="novel-title">
+                                            <a href="#">{{ novel.name }}</a>
+                                        </div>
+                                        <div class="novel-profile">
+                                            {{ novel.profile|safe|truncatechars:85 }}
+                                        </div>
+                                        <div class="novel-author">
+                                            <a href="#" class="author-name"><span>{{ novel.author.pen_name }}</span></a>
+                                            <span class="nav-number">{{ novel.words_num|words_num_filter }}万字</span>
+                                            <span class="nav-tag">{{ novel.tag.name }}</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {# 分页按钮 #}
+                    <div class="pagination-group text-center">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                {% if page_obj.has_previous %}
+                                    <li>
+                                        <a href="{% url 'novel:rank' %}?page={{ page_obj.previous_page_number }}&{{ page_query }}" aria-label="Previous">
+                                            <span aria-hidden="true">&lt;</span>
+                                        </a>
+                                    </li>
+                                    {% else %}
+                                    <li class="disabled">
+                                        <a href="javascript:void(0)" aria-label="Previous" class="disabled">
+                                            <span aria-hidden="true">&lt;</span>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                                {% if left_has_more %}
+                                    <li><a href="{% url 'novel:rank' %}?page=1&{{ page_query }}">1</a></li>
+                                    <li class="disabled"><a href="javascript:void(0)">...</a></li>
+                                {% endif %}
+                                {% for page in left_pages %}
+                                    <li><a href="{% url 'novel:rank' %}?page={{ page }}&{{ page_query }}">{{ page }}</a></li>
+                                {% endfor %}
+                                <li class="active"><a href="javascript:void(0)">{{ current_page }}</a></li>
+                                {% for page in right_pages %}
+                                    <li><a href="{% url 'novel:rank' %}?page={{ page }}&{{ page_query }}">{{ page }}</a></li>
+                                {% endfor %}
+                                {% if right_has_more %}
+                                    <li class="disabled"><a href="javascript:void(0)">...</a></li>
+                                    <li><a href="{% url 'novel:rank' %}?page={{ num_pages }}&{{ page_query }}">{{ num_pages }}</a></li>
+                                {% endif %}
+                                {% if page_obj.has_next %}
+                                    <li>
+                                        <a href="{% url 'novel:rank' %}?page={{ page_obj.next_page_number }}&{{ page_query }}" aria-label="Next">
+                                            <span aria-hidden="true">&gt;</span>
+                                        </a>
+                                    </li>
+                                {% else %}
+                                    <li class="disabled">
+                                        <a href="javascript:void(0)" aria-label="Next">
+                                            <span aria-hidden="true">&gt;</span>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- 本周强推 -->
+            <div class="recommend-wrapper">
+                <div class="recommend-header">
+                    <h2>本周强推</h2>
+                </div>
+                <ul>
+                    {% for novel in recommend_novels|slice:'0:20' %}
+                        <li>
+                            <span class="novel-cate"><a href="#">「{{ novel.category.name }}」</a></span>
+                            <span class="novel-name"><a href="#">{{ novel.name|truncate:8 }}</a></span>
+                            <span class="novel-author"><a href="#">{{ novel.author.pen_name }}</a></span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

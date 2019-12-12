@@ -1,0 +1,45 @@
+{% extends 'cms/base.html' %}
+{#{% load news_filter %}#}
+
+{% block title %}
+后台首页
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content-header %}
+<h1>后台首页</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="box box-primary">
+            <div class="box-header">
+                <h3 class="box-title">用户访问量</h3>
+            </div>
+            <div class="box-body">
+                {% include 'cms/chart.html' %}
+            </div>
+            <div class="box-footer">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="box box-primary">
+            <div class="box-header">
+                <h3 class="box-title">统计</h3>
+            </div>
+            <div class="box-body">
+                {% include 'cms/data.html' %}
+            </div>
+            <div class="box-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

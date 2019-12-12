@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf_token" comtent="{{ csrf_token }}">
+    <title>{% block title %}
+
+    {% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="icon" type="image/x-ico" href="{% static 'images/logo.ico' %}" />
+    <link rel="stylesheet" href="{% static 'adminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminLTE/bower_components/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminLTE/bower_components/Ionicons/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminLTE/dist/css/AdminLTE.min.css' %}">
+    <link rel="stylesheet" href="{% static 'adminLTE/dist/css/skins/_all-skins.min.css' %}">
+    <link rel="stylesheet" href={% static 'sweetalert/sweetalert.css' %}>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1538834_3e6eghu470g.css">
+    <script src="{% static 'adminLTE/bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'adminLTE/bower_components/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script>$.widget.bridge('uibutton', $.ui.button);</script>
+    <script src="{% static 'adminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'adminLTE/dist/js/adminlte.min.js' %}"></script>
+    <script src="{% static 'adminLTE/dist/js/demo.js' %}"></script>
+    <script src={% static 'js/message.min.js' %}></script>
+    <script src={% static 'sweetalert/sweetalert.min.js' %}></script>
+    <script src={% static 'js/myajax.min.js' %}></script>
+    <script src={% static 'js/xfzalert.min.js' %}></script>
+    <style>
+        header {
+            position: fixed !important;
+            width: 100%;
+        }
+        .main-sidebar{
+            position: fixed;
+        }
+        .content-wrapper {
+            margin-top:50px;
+        }
+    </style>
+    {% block head %}
+
+    {% endblock %}
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>起点</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>起点中文</b>后台管理</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="{% static 'adminLTE/dist/img/user2-160x160.jpg' %}" class="user-image" alt="User Image">
+              <span class="hidden-xs">{{ user.username }}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="{% static 'adminLTE/dist/img/user2-160x160.jpg' %}" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="/" class="btn btn-default btn-flat">首页</a>
+                </div>
+                <div class="pull-right">
+                  <a href="{% url 'xsauth:logout' %}" class="btn btn-default btn-flat">退出</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        {% csrf_token %}
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li><a href="{% url 'cms:index' %}"><i class="fa fa-home"></i><span>首页</span></a></li>
+        {% if perms.novel.change_novel %}
+            <li class="header">小说管理</li>
+            <li><a href="{% url 'cms:novel_list' %}"><i class="fa fa-list"></i><span>小说列表</span></a></li>
+        {% endif %}
+        {% if perms.novel.change_advertisement %}
+            <li class="header">广告管理</li>
+            <li><a href="{% url 'cms:ad_set' %}"><i class="iconfont icon-guanggaogongguan"></i> <span>广告位</span></a></li>
+            <li><a href="{% url 'cms:banners' %}"><i class="iconfont icon-shouyelunbotu"></i> <span>轮播图</span></a></li>
+            <li><a href="{% url 'cms:excellent' %}"><i class="iconfont icon-show"></i> <span>优秀作品展示</span></a></li>
+        {% endif %}
+        {% if perms.novel.change_novelcategory %}
+            <li class="header">分类管理</li>
+            <li><a href="{% url 'cms:category_list' %}"><i class="iconfont icon-category"></i> 分类列表</a></li>
+            <li><a href="{% url 'cms:tag_list' %}"><i class="iconfont icon-tag"></i> 标签列表</a></li>
+        {% endif %}
+        {% if user.is_superuser %}
+            <li class="header">权限管理</li>
+            <li><a href="{% url 'cms:staffs' %}"><i class="fa fa-group"></i><span>员工管理</span></a></li>
+        {% endif %}
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <div class="content-wrapper">
+    <section class="content-header">
+        {% block content-header %}
+
+        {% endblock %}
+    </section>
+
+    <section class="content">
+        {% block content %}
+
+        {% endblock %}
+    </section>
+  </div>
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.18
+    </div>
+    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+</body>
+</html>

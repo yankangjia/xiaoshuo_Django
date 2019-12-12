@@ -1,0 +1,79 @@
+{% extends 'base/front_base.html' %}
+{% load novel_filters %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/novel/search.min.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="wrapper">
+            <!-- 排行榜 -->
+            <div class="search-wrapper">
+                <div class="search-header">
+                    <h2>搜索结果</h2>
+                </div>
+                <div class="search-body">
+                    <div class="novel-media">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <ul>
+                            {% for novel in novels|slice:'0:6' %}
+                                <li>
+                                    <div class="novel-img">
+                                        <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">
+                                            <img src="{{ novel.cover_url }}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="novel-info">
+                                        <div class="novel-title">
+                                            <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name }}</a>
+                                        </div>
+                                        <div class="novel-author">
+                                            <a href="#" class="author-name">{{ novel.author.username }}</a>
+                                            <a href="#" class="category">{{ novel.category.name }}</a>
+                                            <a href="#" class="is_complete">{% if novel.is_complete %}完结{% else %}连载{% endif %}</a>
+{#                                            <span class="nav-number">{{ novel.words_num|words_num_filter }}万字</span>#}
+                                        </div>
+                                        <div class="novel-profile">
+                                            {{ novel.profile|safe|truncatechars:120 }}
+                                        </div>
+                                        <div class="recent">
+                                            最近更新
+                                            {{ novel|recent_title }}
+                                            {{ novel|recent_date }}
+                                        </div>
+                                    </div>
+                                    <div class="novel-operate">
+                                        <div class="words-num">{{ novel.words_num|words_num_filter }}万字</div>
+                                        <p>
+                                            <a href="javascript:void(0)" class="collect">加入书架</a>
+                                            <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank" class="detail">书籍详情</a>
+                                        </p>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 本周强推 -->
+            <div class="recommend-wrapper">
+                <div class="recommend-header">
+                    <h2>本周强推</h2>
+                </div>
+                <ul>
+                    {% for novel in recommend_novels|slice:'0:11' %}
+                        <li>
+                            <span class="novel-cate"><a href="#">「{{ novel.category.name }}」</a></span>
+                            <span class="novel-name"><a href="#">{{ novel.name }}</a></span>
+                            <span class="novel-author"><a href="#">{{ novel.author.username }}</a></span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

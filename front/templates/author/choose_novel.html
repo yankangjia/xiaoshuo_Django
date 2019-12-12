@@ -1,0 +1,82 @@
+{% extends 'author/base.html' %}
+
+
+{% block title %}
+    {% if news %}
+        编辑小说
+    {% else %}
+        发布小说
+    {% endif %}
+{% endblock %}
+
+{% block head %}
+    <script src={% static 'ueditor/ueditor.config.js' %}></script>
+    <script src={% static 'ueditor/ueditor.all.min.js' %}></script>
+    <style>
+        .media-left{
+            padding-right: 30px;
+        }
+        .finish {
+           color: #bebebe;
+        }
+    </style>
+{% endblock %}
+
+{% block content-header %}
+    <h1>{{ header_text }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3>请选择小说</h3>
+                </div>
+                <div class="box-body">
+                    <table class="table">
+                        {% for novel in novels %}
+                            <tr>
+                                <td class="col-md-8">
+                                    <div class="media"  style="margin:10px 0;">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img style="width:100px;" class="media-object" src="{{ novel.cover_url }}" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3 class="media-heading">
+                                                <div class="clearfix">
+                                                    <span class="pull-left">{{ novel.name }}</span>
+                                                    {% if operate == 1 %}
+                                                        {% if novel.is_complete %}
+                                                            <span class="pull-right finish">已完结</span>
+                                                        {% else %}
+                                                            <a href="{% url 'account:write_chapter' %}?novel_id={{ novel.id }}" class="btn btn-warning btn-md pull-right">更新小说</a>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        <a href="{% url 'account:chapter_list' %}?novel_id={{ novel.id }}" class="btn btn-warning btn-md pull-right">查看章节</a>
+                                                    {% endif %}
+                                                </div>
+                                            </h3>
+                                            <div class="row">
+                                                <h5 class="col-md-2"><i class="iconfont icon-fenlei"></i> {{ novel.category.name }}</h5>
+                                                <h5 class="col-md-3"><i class="iconfont icon-zhangjiechuti"></i> 当前共{{ novel.chapters_num }}章</h5>
+                                                <h5 class="col-md-3"><i class="iconfont icon-shuzi"></i> 当前共{{ novel.words_num }}字</h5>
+                                            </div>
+                                            <span>{{ novel.profile|safe|truncatechars:100 }}</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="col-md-4"></td>
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+                </div>
+                <div class="box-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

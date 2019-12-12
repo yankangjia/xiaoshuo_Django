@@ -1,0 +1,68 @@
+{% extends 'author/base.html' %}
+{% load novel_filters %}
+
+{% block head %}
+    <script src="{% static 'js/account/collect.min.js' %}"></script>
+    <style>
+        .size-sm {
+            font-size: 15px;
+        }
+        .collect-group {
+            min-height: 150px;
+        }
+    </style>
+{% endblock %}
+
+{% block content-header %}
+<h1>我的书架</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-success">
+                <div class="box-header">
+
+                </div>
+                <div class="box-body">
+                    <div class="row collect-group">
+                        {% for novel in collected_novels %}
+                            <div class="base-novel-div col-md-2 text-center" data-novel-id="{{ novel.id }}">
+                                <div class="thumbnail">
+                                    <a href="{% url 'novel:detail' novel_id=novel.id %}">
+                                        <img src="{{ novel.cover_url }}" style="width: 150px;" class="img-thumbnail" alt="">
+                                    </a>
+                                    <div class="caption">
+                                        <h4>
+                                            {% if novel.name|len_str > 6 %}
+                                                <a href="{% url 'novel:detail' novel_id=novel.id %}" class="text-danger size-sm">{{ novel.name|truncatechars:8 }}</a>
+                                            {% else %}
+                                                <a href="{% url 'novel:detail' novel_id=novel.id %}" class="text-danger">{{ novel.name }}</a>
+                                            {% endif %}
+                                        </h4>
+                                        <h5>{{ novel.category.name }} · {{ novel.author.username }}</h5>
+                                        <p class="clearfix">
+                                            <a href="{% url 'novel:detail' novel_id=novel.id %}" class="btn btn-danger pull-left">继续阅读</a>
+                                            <button type="button" class="btn btn-warning collent-btn pull-right" data-collected="true" data-toggle="tooltip" data-placement="bottom" title="已收藏">
+                                                <span class="glyphicon glyphicon-star-empty"></span>
+                                            </button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <div class="col-md-offset-4 col-md-4 text-center">
+                                <div class="page-header">
+                                    <h1>空空如也&nbsp;&nbsp;&nbsp;<a href="{% url 'index' %}"><small>去看看 >></small></a></h1>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="box-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

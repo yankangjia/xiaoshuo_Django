@@ -1,0 +1,215 @@
+{% extends 'base/front_base.html' %}
+{% load novel_filters %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/novel/whole.min.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <style>
+    ol, ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    a {
+        color: #333333;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #dd0000;
+        text-decoration: none;
+    }
+    </style>
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="wrapper">
+            <!-- 排行榜 -->
+            <div class="rank-wrapper">
+                <!-- 筛选条件 -->
+                <div class="rank-header">
+                    <ul>
+                        <li class="condition-name">类型:</li>
+                        {% if category_id == 0 %}
+                            <li class="active"><a href="#">全部</a></li>
+                        {% else %}
+                            <li><a href="{% url 'novel:whole' %}?{{ category_id_query }}">全部</a></li>
+                        {% endif %}
+                        {% for category in category_name %}
+                            {% if category_id == forloop.counter %}
+                                <li class="active">
+                                    <a href="{% url 'novel:whole' %}?category_id={{ forloop.counter }}&{{ category_id_query }}">{{ category.1 }}</a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="{% url 'novel:whole' %}?category_id={{ forloop.counter }}&{{ category_id_query }}">{{ category.1 }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                        <li><a href="#">轻小说</a></li>
+                    </ul>
+                    <ul>
+                        <li class="condition-name">是否付费:</li>
+                        {% if is_free == 0 %}
+                            <li class="active"><a href="#">全部</a></li>
+                        {% else %}
+                            <li><a href="{% url 'novel:whole' %}?{{ is_free_query }}">全部</a></li>
+                        {% endif %}
+                        {% if is_free == 1 %}
+                            <li class="active">
+                                <a href="{% url 'novel:whole' %}?is_free=1&{{ is_free_query }}">免费</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{% url 'novel:whole' %}?is_free=1&{{ is_free_query }}">免费</a>
+                            </li>
+                        {% endif %}
+                        {% if is_free == 2 %}
+                            <li class="active">
+                                <a href="{% url 'novel:whole' %}?is_free=2&{{ is_free_query }}">付费</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{% url 'novel:whole' %}?is_free=2&{{ is_free_query }}">付费</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                    <ul>
+                        <li class="condition-name">是否完本:</li>
+                        {% if is_complete == 0 %}
+                            <li class="active"><a href="{% url 'novel:whole' %}?{{ is_complete_query }}">全部</a></li>
+                        {% else %}
+                            <li><a href="{% url 'novel:whole' %}?{{ is_complete_query }}">全部</a></li>
+                        {% endif %}
+                        {% if is_complete == 1 %}
+                            <li class="active"><a href="{% url 'novel:whole' %}?is_complete=1&{{ is_complete_query }}">完本</a></li>
+                        {% else %}
+                            <li><a href="{% url 'novel:whole' %}?is_complete=1&{{ is_complete_query }}">完本</a></li>
+                        {% endif %}
+                        {% if is_complete == 2 %}
+                            <li class="active">
+                                <a href="{% url 'novel:whole' %}?is_complete=2&{{ is_complete_query }}">连载</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{% url 'novel:whole' %}?is_complete=2&{{ is_complete_query }}">连载</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                    <ul>
+                        <li class="condition-name">排序方式:</li>
+                        {% if sort == 1 %}
+                            <li class="active"><a href="{% url 'novel:whole' %}?sort=1&{{ sort_query }}">最新</a></li>
+                        {% else %}
+                            <li><a href="{% url 'novel:whole' %}?sort=1&{{ sort_query }}">最新</a></li>
+                        {% endif %}
+                        {% if sort == 2 %}
+                            <li class="active">
+                                <a href="{% url 'novel:whole' %}?sort=2&{{ sort_query }}">最热</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{% url 'novel:whole' %}?sort=2&{{ sort_query }}">最热</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="rank-body">
+                    {# 该页所有小说 #}
+                    <div class="novel-media">
+                        <ul>
+                            {% for novel in novels %}
+                                <li>
+                                    <div class="novel-img">
+                                        <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">
+                                            <img src="{{ novel.cover_url }}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="novel-info">
+                                        <div class="novel-title">
+                                            <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name }}</a>
+                                        </div>
+                                        <div class="novel-profile">
+                                            {{ novel.profile|safe|truncatechars:90 }}
+                                        </div>
+                                        <div class="novel-author">
+                                            <a href="#" class="author-name"><span>{{ novel.author.username }}</span></a>
+                                            <span class="nav-number">{{ novel.words_num|words_num_filter }}万字</span>
+                                            <span class="nav-tag">{{ novel.tag.name }}</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {# 分页按钮 #}
+                    <div class="pagination-group text-center">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                {% if page_obj.has_previous %}
+                                    <li>
+                                        <a href="{% url 'novel:whole' %}?page={{ page_obj.previous_page_number }}&{{ page_query }}" aria-label="Previous">
+                                            <span aria-hidden="true">&lt;</span>
+                                        </a>
+                                    </li>
+                                    {% else %}
+                                    <li class="disabled">
+                                        <a href="javascript:void(0)" aria-label="Previous" class="disabled">
+                                            <span aria-hidden="true">&lt;</span>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                                {% if left_has_more %}
+                                    <li><a href="{% url 'novel:whole' %}?page=1&{{ page_query }}">1</a></li>
+                                    <li class="disabled"><a href="javascript:void(0)">...</a></li>
+                                {% endif %}
+                                {% for page in left_pages %}
+                                    <li><a href="{% url 'novel:whole' %}?page={{ page }}&{{ page_query }}">{{ page }}</a></li>
+                                {% endfor %}
+                                <li class="active"><a href="javascript:void(0)">{{ current_page }}</a></li>
+                                {% for page in right_pages %}
+                                    <li><a href="{% url 'novel:whole' %}?page={{ page }}&{{ page_query }}">{{ page }}</a></li>
+                                {% endfor %}
+                                {% if right_has_more %}
+                                    <li class="disabled"><a href="javascript:void(0)">...</a></li>
+                                    <li><a href="{% url 'novel:whole' %}?page={{ num_pages }}&{{ page_query }}">{{ num_pages }}</a></li>
+                                {% endif %}
+                                {% if page_obj.has_next %}
+                                    <li>
+                                        <a href="{% url 'novel:whole' %}?page={{ page_obj.next_page_number }}&{{ page_query }}" aria-label="Next">
+                                            <span aria-hidden="true">&gt;</span>
+                                        </a>
+                                    </li>
+                                {% else %}
+                                    <li class="disabled">
+                                        <a href="javascript:void(0)" aria-label="Next">
+                                            <span aria-hidden="true">&gt;</span>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- 本周强推 -->
+            <div class="recommend-wrapper">
+                <div class="recommend-header">
+                    <h2>本周强推</h2>
+                </div>
+                <ul>
+                    {% for novel in recommend_novels|slice:'0:20' %}
+                        <li>
+                            <span class="novel-cate"><a href="#">「{{ novel.category.name }}」</a></span>
+                            <span class="novel-name"><a href="#">{{ novel.name|truncate:8 }}</a></span>
+                            <span class="novel-author"><a href="#">{{ novel.author.pen_name }}</a></span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

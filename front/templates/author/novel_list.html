@@ -1,0 +1,170 @@
+{% extends 'author/base.html' %}
+{% load author_filter %}
+
+{% block title %}
+小说列表
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'adminLTE/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css' %}">
+    <script src="{% static 'adminLTE/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'adminLTE/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js' %}"></script>
+    <script src="{% static 'js/account/novel_list.min.js' %}"></script>
+    <style>
+    .dropdown-menu {
+        min-width: 0;
+    }
+    .search-btn {
+        margin-left: 20px;
+    }
+    </style>
+{% endblock %}
+
+{% block content-header %}
+<h1>小说管理</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-success">
+            <div class="box-header">
+                {# 搜索条件 #}
+                <form action="" method="get" class="form-inline">
+                    {% csrf_token %}
+                    <div class="form-group left-group">
+                        <label>时间：</label>
+                        <input type="text" name="start" id="start-picker" placeholder="起始时间" class="form-control" value="{{ start }}" readonly>
+                        <span> - </span>
+                        <input type="text" name="end" id="end-picker" placeholder="结束时间" class="form-control" value="{{ end }}" readonly>
+                    </div>
+                    <div class="form-group left-group">
+                        <label for="name-input">书名：</label>
+                        <input type="text" id="name-input" name="name" class="form-control" value="{{ name }}">
+                    </div>
+                    <div class="form-group left-group">
+                        <label for="">分类：</label>
+                        <select name="category_id" id="" class="form-control">
+                        {% if category_id %}
+                            <option value="0">所有分类</option>
+                        {% else %}
+                            <option value="0" selected>所有分类</option>
+                        {% endif %}
+                        {% for category in categories %}
+                            {% if category_id == category.pk %}
+                                <option value="{{ category.pk }}" selected>{{ category.name }}</option>
+                            {% else %}
+                                <option value="{{ category.pk }}">{{ category.name }}</option>
+                            {% endif %}
+                        {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group left-group">
+                        <button class="btn btn-primary">查询</button>
+                    </div>
+                    <div class="form-group">
+                        <a href="{% url 'account:novel_list' %}">清除查询</a>
+                    </div>
+                </form>
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>封面图</th>
+                            <th>书名</th>
+                            <th>分类</th>
+                            <th>章数</th>
+                            <th>字数</th>
+                            <th>价格</th>
+                            <th>发布时间</th>
+                            <th>是否完本</th>
+                            <th>是否推荐</th>
+                            <th>作者</th>
+                            <th>简介</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for novel in novels %}
+                            <tr data-novel-id="{{ novel.pk }}" >
+                                <td style="width:76px;height:96px;">
+                                    <a href="{% url 'account:chapter_list' %}?novel_id={{ novel.pk }}">
+                                        <img style="width:60px;" src="{{ novel.cover_url }}" alt="">
+                                    </a>
+                                </td>
+                                <td style="width:130px;">
+                                    <a href="{% url 'account:chapter_list' %}?novel_id={{ novel.pk }}">
+                                        {{ novel.name }}
+                                    </a>
+                                </td>
+                                <td>{{ novel.category.name }}</td>
+                                <td>{{ novel.chapters_num }}</td>
+                                <td>{{ novel.words_num }}</td>
+                                <td>{{ novel.price }}</td>
+                                <td style="width:100px;">{{ novel.pub_date|time_format }}</td>
+                                <td>{{ novel.is_complete|complete_to_string }}</td>
+                                <td>{{ novel.is_recommend|recommend_to_string }}</td>
+                                <td>{{ novel.author.username }}</td>
+                                <td style="width: 250px;">
+                                    <div style="height:80px;overflow: hidden;text-overflow: ellipsis">
+                                        {{ novel.profile|safe|truncatechars:100 }}
+                                    </div>
+                                </td>
+                                <td style="width:60px;">
+                                    <div class="dropdown">
+                                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        <span class="glyphicon glyphicon-cog"></span>
+                                        <span class="caret"></span>
+                                      </button>
+                                      <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                          <li><a class="update-btn" href="javascript:void(0)" data-finish="{{ novel.is_complete }}">更新</a></li>
+                                          {% if not novel.is_complete %}
+                                              <li><a href="javascript:void(0)" class="set-finish-btn">完结</a></li>
+                                          {% endif %}
+                                          <li><a href="{% url 'account:edit_novel' %}?novel_id={{ novel.id }}">编辑</a></li>
+                                          <li><a href="javascript:void(0)" class="delete-btn">删除</a></li>
+                                      </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="box-footer">
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    {% if page_obj.has_previous %}
+                        <li><a href="{% url 'account:novel_list' %}?p={{ page_obj.previous_page_number }}{{ url_query }}">«</a></li>
+                    {% else %}
+                        <li class="disabled"><a href="javascript:void(0);">«</a></li>
+                    {% endif %}
+                    {% if left_has_more %}
+                        <li><a href="{% url 'account:novel_list' %}{{ url_query }}">1</a></li>
+                        <li><a href="javascript:void(0);" style="cursor:default;">...</a></li>
+                    {% else %}
+                        {% for left_page in left_pages %}
+                            <li><a href="{% url 'account:novel_list' %}?p={{ left_page }}{{ url_query }}">{{ left_page }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                    <li class="active"><a href="javascript:void(0)">{{ current_page }}</a></li>
+                    {% if right_has_more %}
+                        <li><a href="javascript:void(0);" style="cursor:default;">...</a></li>
+                        <li><a href="{% url 'account:novel_list' %}?p={{ paginator.num_pages }}{{ url_query }}">{{ paginator.num_pages }}</a></li>
+                    {% else %}
+                        {% for right_page in right_pages %}
+                            <li><a href="{% url 'account:novel_list' %}?p={{ right_page }}{{ url_query }}">{{ right_page }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                    {% if page_obj.has_next %}
+                        <li><a href="{% url 'account:novel_list' %}?p={{ page_obj.next_page_number }}{{ url_query }}">»</a></li>
+                    {% else %}
+                        <li class="disabled"><a href="javascript:void(0)">»</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

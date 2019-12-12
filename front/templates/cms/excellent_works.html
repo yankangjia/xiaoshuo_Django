@@ -1,0 +1,43 @@
+{% extends 'cms/base.html' %}
+{% load cms_filters %}
+
+{% block title %}
+网络文学优秀作品联展
+{% endblock %}
+
+{% block head %}
+    <script src="{% static 'js/cms/excellent_works.min.js' %}"></script>
+{% endblock %}
+
+{% block content-header %}
+<h1>网络文学优秀作品联展</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    {% for i in range4 %}
+        {% with excellent_workses|get_model:i as works %}
+            <div class="col-md-8">
+                <div class="box box-primary" data-works-id="{{ works.pk }}" data-location="{{ forloop.counter }}">
+                    <div class="box-header">
+                        <span>{{ forloop.counter }}</span>
+                    </div>
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="">标题</label>
+                            <input type="text" name="title" value="{{ works.title }}" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">链接</label>
+                            <input type="text" name="link_to" value="{{ works.link_to }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button type="button" class="submit-btn btn btn-info pull-right">保存</button>
+                    </div>
+                </div>
+            </div>
+        {% endwith %}
+    {% endfor %}
+</div>
+{% endblock %}

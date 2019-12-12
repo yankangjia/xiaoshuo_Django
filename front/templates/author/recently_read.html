@@ -1,0 +1,75 @@
+{% extends 'author/base.html' %}
+{% load novel_filters %}
+
+{% block head %}
+    <script src="{% static 'js/account/collect.min.js' %}"></script>
+    <style>
+        .size-sm {
+            font-size: 15px;
+        }
+        .read-group {
+            min-height: 150px;
+        }
+    </style>
+{% endblock %}
+
+{% block content-header %}
+<h1>最近阅读</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-success">
+                <div class="box-header">
+
+                </div>
+                <div class="box-body">
+                    <div class="row read-group">
+                        {% for novel in novels|slice:'0:24' %}
+                            <div class="base-novel-div col-md-2 text-center" data-novel-id="{{ novel.id }}">
+                                <div class="thumbnail">
+                                    <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">
+                                        <img style="width:150px;" class="img-thumbnail" src="{{ novel.cover_url }}" alt="">
+                                    </a>
+                                    <div class="caption">
+                                        <h4>
+                                            {% if novel.name|len_str > 6 %}
+                                                <a href="{% url 'novel:detail' novel_id=novel.id %}" class="text-danger size-sm" target="_blank">{{ novel.name|truncatechars:8 }}</a>
+                                            {% else %}
+                                                <a href="{% url 'novel:detail' novel_id=novel.id %}" class="text-danger" target="_blank">{{ novel.name }}</a>
+                                            {% endif %}
+                                        </h4>
+                                        <h5>{{ novel.category.name }} · {{ novel.author.username }}</h5>
+                                        <p class="clearfix">
+                                            <a href="{% url 'novel:detail' novel_id=novel.id %}" class="btn btn-danger pull-left" target="_blank">继续阅读</a>
+                                            {% if novel in collect_novels %}
+                                                <button type="button" class="btn btn-warning collent-btn pull-right" data-collected="true" data-toggle="tooltip" data-placement="bottom" title="已收藏">
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                </button>
+                                            {% else %}
+                                                <button type="button" class="btn btn-default collent-btn pull-right" data-collected="false" data-toggle="tooltip" data-placement="bottom" title="点击收藏">
+                                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                                </button>
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <div class="col-md-offset-4 col-md-4 text-center">
+                                <div class="page-header">
+                                    <h1>空空如也&nbsp;&nbsp;&nbsp;<a href="{% url 'index' %}"><small>去看看 >></small></a></h1>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="box-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

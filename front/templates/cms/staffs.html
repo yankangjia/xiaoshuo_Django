@@ -1,0 +1,64 @@
+{% extends 'cms/base.html' %}
+
+{% block title %}
+    员工管理
+{% endblock %}
+
+{% block head %}
+<script src="{% static 'js/cms/staff.min.js' %}"></script>
+{% endblock %}
+
+{% block content-header %}
+    <h2>员工管理</h2>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header">
+                    <a href="{% url 'cms:add_staff' %}" class="btn btn-primary pull-right">添加员工</a>
+                </div>
+                <div class="box-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>用户名</th>
+                                <th>手机号</th>
+                                <th>邮箱</th>
+                                <th>所属组</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for staff in staffs %}
+                                <tr data-staff-id="{{ staff.id }}">
+                                    <td>{{ staff.username }}</td>
+                                    <td>{{ staff.telephone }}</td>
+                                    <td>{{ staff.email }}</td>
+                                    <td>
+                                        {% if staff.is_superuser %}
+                                            超级管理员
+                                        {% else %}
+                                            {% for group in staff.groups.all %}
+                                                {{ group.name }}
+                                                {% if not forloop.last %}
+                                                    /
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'cms:edit_staff' staff_id=staff.id %}" class="btn btn-info btn-xs">编辑</a>
+                                        <button class="delete-btn btn btn-danger btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
