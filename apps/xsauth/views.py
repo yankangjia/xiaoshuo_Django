@@ -19,7 +19,7 @@ def login_view(request):
         telephone = form.cleaned_data.get('telephone')
         password = form.cleaned_data.get('password')
         remember = form.cleaned_data.get('remember')
-        print(remember)
+
         # 判断用户是否存在
         user = authenticate(request,telephone=telephone,password=password)
         if user:

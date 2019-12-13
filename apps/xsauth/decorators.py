@@ -1,5 +1,5 @@
 from utils import restful
-from django.shortcuts import redirect
+from django.shortcuts import redirect, reverse
 from functools import wraps
 from django.http import Http404
 from django.core.exceptions import PermissionDenied
@@ -47,7 +47,11 @@ def xs_login_required(func):
             if request.is_ajax():
                 return restful.unauth(message="请先登录！")
             else:
-                return redirect('/')
+                previous = request.META['HTTP_REFERER']
+                current = request.path
+                current_query_string = request.META['QUERY_STRING']
+                redirect_url = '%s?next=%s?%s' % (previous,current,current_query_string)
+                return redirect(redirect_url)
     return wrapper
 
 def xs_superuser_required(viewfunc):

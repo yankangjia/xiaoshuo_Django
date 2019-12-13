@@ -6,7 +6,6 @@ from django.http import Http404
 from urllib import parse
 from utils import restful
 from apps.xsauth.decorators import xs_login_required
-import time
 from django.views.decorators.http import require_POST
 from django.core.paginator import Paginator
 from django.views.generic import View

@@ -39,14 +39,14 @@ Auth.prototype.smsSuccessEvent = function(){
 // 监听模态对话框显示与隐藏事件
 Auth.prototype.listenShowHideEvent = function(){
     var self = this
-    var signIn = $('.sign-in')
-    var signUp = $('.sign-up')
+    self.signIn = $('.sign-in')
+    self.signUp = $('.sign-up')
     var closeBtn = $('.close-btn')
-    signIn.click(function(){
+    self.signIn.click(function(){
         self.scrollWrapper.css({'left':'0px'})
         self.showEvent()
     })
-    signUp.click(function(){
+    self.signUp.click(function(){
         self.scrollWrapper.css({'left':'-400px'});
         self.imgCaptchaRefresh();
         self.showEvent();
@@ -81,13 +81,12 @@ Auth.prototype.listenSignInEvent = function(){
     var passwordInput = signInGroup.find("input[name='password']")
     var rememberInput = signInGroup.find("input[name='remember']")
 
-    var signInBtn = signInGroup.find('.submit-btn')
+    var signInBtn = signInGroup.find('.submit-btn');
     signInBtn.click(function(){
         var telephone = telephoneInput.val()
         var password = passwordInput.val()
         // 获取复选框是否勾选  True/False
         var remember = rememberInput.prop("checked")
-
         myajax.post({
             'url': '/xsauth/login/',
             'data': {
@@ -100,7 +99,17 @@ Auth.prototype.listenSignInEvent = function(){
                     // 隐藏模态框
                     self.hideEvent();
                     // 刷新页面
-                    window.location.reload()
+
+                    if(self.hasOwnProperty('next')){
+                        var next = self.next;
+                        var protocol = window.location.protocol;     // 请求协议
+                        var host = window.location.host;            // 主机名
+                        var domain = protocol + '//' + host;         // 域名
+                        window.location.href = domain + next
+                        console.log(domain + next)
+                    } else{
+                        window.location.reload()
+                    }
                 }
             }
         })
@@ -190,6 +199,32 @@ Auth.prototype.listenSignUpEvent = function(){
     })
 };
 
+// 根据查询字符串判断是否需要弹出登录框  该方法需要在“监听模态对话框显示与隐藏事件”之后
+Auth.prototype.needAuth = function(){
+    var self = this;
+    console.log(111);
+    //获取URL查询字符串参数值，可以抽取每个参数和参数值
+    var queryString = function(){
+        var q = location.search.substring(1);	//获取查询字符串
+        var a = q.split("&");
+        console.log(a);
+        var o = {};
+        for (var i = 0, len = a.length; i < len; i++){
+            var n = a[i].indexOf("=");
+            if (n == -1) continue;
+            var v1 = a[i].substring(0, n);
+            var v2 = a[i].substring(n + 1);
+            o[v1] = unescape(v2);				//以名/值对的形式存储在对象中
+            console.log(o[v1])
+        }
+        return o;
+    };
+    var qs = queryString();
+    if(qs.hasOwnProperty('next')){
+        self.next = qs['next'];
+        self.signIn.trigger('click');
+    }
+};
 
 Auth.prototype.run = function(){
     this.listenShowHideEvent()
@@ -198,6 +233,7 @@ Auth.prototype.run = function(){
     this.listenImgCaptchaEvent()
     this.listenSmsCaptchaEvent()
     this.listenSignUpEvent()
+    this.needAuth()
 };
 
 
