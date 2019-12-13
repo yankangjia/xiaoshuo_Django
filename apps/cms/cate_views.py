@@ -71,7 +71,6 @@ def tag_list(request):
     return render(request,'cms/tag_list.html',context=context)
 
 # 标签详情
-@require_POST
 @permission_required(perm='novel.change_noveltag',login_url='/')
 def tag_detail(request):
     category_id = request.GET.get('category_id')
