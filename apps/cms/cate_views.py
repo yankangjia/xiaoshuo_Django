@@ -1,14 +1,10 @@
-from django.shortcuts import render,reverse,redirect
+from django.shortcuts import render
 from utils import restful
-from apps.novel.models import Novel, NovelCategory, NovelTag
+from apps.novel.models import NovelCategory, NovelTag
 from .forms import EditNovelCategoryForm
 from django.forms.models import model_to_dict
 from django.contrib.auth.decorators import permission_required
-from django.contrib.admin.views.decorators import staff_member_required
-from django.utils.decorators import method_decorator
-from apps.xsauth.decorators import xs_permission_required
-from django.views.decorators.http import require_POST
-import os
+from django.views.decorators.http import require_POST, require_GET
 
 
 # 分类列表
@@ -85,7 +81,7 @@ def tag_detail(request):
     return render(request, 'cms/tag_detail.html',context=context)
 
 # 异步加载标签
-@require_POST
+@require_GET
 @permission_required(perm='novel.change_noveltag')
 def get_tags(request):
     category_id = request.GET.get('category_id')
