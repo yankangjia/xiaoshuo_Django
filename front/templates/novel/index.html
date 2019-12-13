@@ -83,18 +83,11 @@
                         <div class="works-show">
                             <h4>网络文学优秀作品展示</h4>
                             <ul>
-                                <li>
-                                    <a href="#">「公告」PC本章说功能优化</a>
-                                </li>
-                                <li>
-                                    <a href="#">「资讯」干涉中国内政必将徒劳</a>
-                                </li>
-                                <li>
-                                    <a href="#">「资讯」新华社评论员文章</a>
-                                </li>
-                                <li>
-                                    <a href="#">「资讯」人民日报评论员文章</a>
-                                </li>
+                                {% for works in excellent_workses|slice:'0:4' %}
+                                    <li>
+                                        <a href="{{ works.link_to }}" target="_blank">「公告」{{ works.title }}</a>
+                                    </li>
+                                {% endfor %}
                                 <li>
                                     <a href="#">
                                         <span class="game-web-tag">页游</span>
@@ -111,7 +104,7 @@
                             <div class="roll-message">
                                 <i class="trumpet iconfont icon-broadcast"></i>
                                 <marquee>
-                                    <a href="">心语丶丶打赏从收租开始当大佬100W点，【成为该书白银大盟】</a>
+                                    <a href="#">心语丶丶打赏从收租开始当大佬100W点，【成为该书白银大盟】</a>
                                 </marquee>
                             </div>
                         </div>

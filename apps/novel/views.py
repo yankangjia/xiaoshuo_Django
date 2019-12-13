@@ -1,15 +1,11 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
-from .models import Novel, NovelChapter, NovelCategory, Banner, Advertisement,NovelTag
+from .models import Novel, NovelChapter, NovelCategory, Banner, Advertisement, NovelTag, ExcellentWorks
 from django.conf import settings
 from django.db.models import Q
 from django.http import Http404
 from urllib import parse
 from utils import restful
-from django.views.decorators.cache import cache_page
-from django.core.cache import cache
-from django.http import HttpResponse
-from apps.xsauth.decorators import xs_permission_required,xs_login_required
+from apps.xsauth.decorators import xs_login_required
 import time
 from django.views.decorators.http import require_POST
 from django.core.paginator import Paginator
@@ -20,25 +16,22 @@ def index(request):
     all_category_name = settings.CATEGORY_NAME
     base_novels = Novel.objects.select_related('category', 'tag', 'author')
     cate_hot_novels = []
-    # 广告
-    ads = Advertisement.objects.all()[0:4]
-    # 分类排行
+    # 分类排行  每两个为一组，获取每个组的热门图书
     for i in range(0,6):
         id1, id2 = i*2+1, i*2+2
         name1, name2 = all_category_name[id1-1][1], all_category_name[id2-1][1]
         novels = base_novels.filter(Q(category_id=id1)|Q(category_id=id2))[0:5]
         cate_hot_novels.append((name1,name2,novels))
 
-    now = time.strftime('%H:%M:%S', time.localtime())
     context = {
-        'ads': ads,
+        'ads': Advertisement.objects.all()[0:4],
         'banners': Banner.objects.all(),
+        'excellent_workses': ExcellentWorks.objects.all(),
         'all_category_name': all_category_name,
         'new_novels': base_novels,
         'recommend_novels': base_novels.filter(is_recommend=True),
         'cate_hot_novels': cate_hot_novels,
         'rank_novels': base_novels.order_by('-views'),
-        'now': now,
     }
     return render(request,'novel/index.html', context=context)
 
