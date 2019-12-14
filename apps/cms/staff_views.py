@@ -23,7 +23,7 @@ def staffs_view(request):
 @method_decorator(xs_superuser_required,name='dispatch')
 class AddStaff(View):
     def get(self,request):
-        groups = Group.objects.all()
+        groups = Group.objects.filter(name__in=['广告','管理'])
         context = {
             'groups': groups
         }

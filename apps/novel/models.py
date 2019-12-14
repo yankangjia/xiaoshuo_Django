@@ -67,6 +67,12 @@ class NovelChapter(models.Model):
         self.novel.save(update_fields=['words_num','chapters_num'])
         super().save(*args, **kwargs)
 
+    def delete(self, using=None, keep_parents=False):
+        self.novel.words_num -= self.words_num
+        self.novel.chapters_num -= 1
+        self.novel.save(update_fields=['words_num','chapters_num'])
+        super(NovelChapter, self).delete(using=None, keep_parents=False)
+
 class NovelCategory(models.Model):
     name = models.CharField(max_length=200)
     class Meta:

@@ -20,7 +20,7 @@ pycparser==2.19
 PyMySQL==0.9.3
 python-memcached==1.59
 pytz==2019.2
-qiniu==7.2.6
+qiniu==7.2.4
 redis==3.3.11
 requests==2.22.0
 shortuuid==0.5.0
