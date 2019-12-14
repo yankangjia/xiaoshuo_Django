@@ -12,8 +12,8 @@ urlpatterns = [
     path('rank/', views.RankView.as_view(), name='rank'),
     # 全部
     path('whole/', views.WholeView.as_view(), name='whole'),
-    # 搜索
-    # path('search/', views.search, name='search'),
+    #     # 搜索
+    path('search/', views.Search(), name='search'),
     # 收藏图书
     path('collect/',views.collect_novel,name='collect'),
     # 取消收藏

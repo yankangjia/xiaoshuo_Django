@@ -53,7 +53,7 @@
             <div class="logo">
                 <a href="/"></a>
             </div>
-            <form action="/search/">
+            <form action="{% url 'novel:search' %}">
                 {% csrf_token %}
                 <input type="text" name="q" id="search-text" value="{% block query %}{% endblock %}">
                 <span class="search-btn iconfont icon-baseline-search-px"></span>

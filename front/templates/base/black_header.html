@@ -42,7 +42,7 @@
         {% endif %}
     </div>
     <div class="search">
-        <form action="/search/">
+        <form action="{% url 'novel:search' %}">
             {% csrf_token %}
             <input type="text" id="text" name="q" class="text" placeholder="你的灵兽看起来很好吃">
             <label class="submit-btn iconfont icon-baseline-search-px" for="submit"></label>

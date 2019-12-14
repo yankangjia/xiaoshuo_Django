@@ -17,7 +17,7 @@ urlpatterns = [
     path('ueditor/', include('apps.ueditor.urls')),
     path('xsauth/', include('apps.xsauth.urls')),
     path('cms/', include('apps.cms.urls')),
-    path('search/', include('haystack.urls')),
+    # path('search/', include('haystack.urls')),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

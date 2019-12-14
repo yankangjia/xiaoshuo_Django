@@ -9,6 +9,7 @@ from apps.xsauth.decorators import xs_login_required
 from django.views.decorators.http import require_POST
 from django.core.paginator import Paginator
 from django.views.generic import View
+from haystack.views import SearchView
 
 # 首页
 def index(request):
@@ -246,12 +247,15 @@ class WholeView(View):
         }
 
 # 搜索
-def search(request):
-    novels = Novel.objects.all()
-    context = {
-        'novels': novels
-    }
-    return render(request,'novel/search.html',context=context)
+class Search(SearchView):
+    def extra_context(self):
+        recommend_novels = Novel.objects.prefetch_related('category','author').filter(is_recommend=True)
+        context = {
+            'recommend_novels': recommend_novels
+        }
+        super_context = super(Search, self).extra_context()
+        context.update(super_context)
+        return context
 
 # 收藏图书 ajax
 @require_POST
