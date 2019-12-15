@@ -76,7 +76,7 @@
                                                 {{ novel.category.name }}·更新至{{ novel.chapters_num }}{% if novel.chapters_num < 1000 %}章{% endif %}
                                             </h5>
                                             <div class="clearfix">
-                                                <a class="btn btn-success pull-left">更新</a>
+                                                <a href="{% url 'account:write_chapter' %}?novel_id={{ novel.id }}" class="btn btn-success pull-left">更新</a>
                                                 <a href="{% url 'account:chapter_list' %}?novel_id={{ novel.id }}" class="btn btn-warning pull-right">查看</a>
                                             </div>
                                         {% endif %}
