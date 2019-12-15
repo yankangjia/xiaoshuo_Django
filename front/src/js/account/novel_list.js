@@ -54,18 +54,18 @@ NovelList.prototype.listenUpdateEvent = function(){
     })
 };
 
-// 监听删除章节事件
+// 监听删除小说事件
 NovelList.prototype.listenDeleteNovelEvent = function(){
     var deleteBtn = $('.delete-btn');
     deleteBtn.click(function(){
-        var novelId = $(this).attr('data-novel-id');
+        var novelId = $(this).parents('tr').attr('data-novel-id');
         xfzalert.alertConfirm({
             'text': '您确定要删除这个小说吗？',
             'confirmCallback': function(){
                 myajax.post({
                     'url': '/account/delete_novel/',
                     'data': {
-                        'novel_id': novelId
+                        'novel_id': novelId 
                     },
                     'success': function(result){
                         if(result['code'] === 200){
