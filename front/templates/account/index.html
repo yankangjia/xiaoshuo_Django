@@ -69,7 +69,7 @@
                                             </h5>
                                             <div class="clearfix">
                                                 <span class="pull-left finish">已完结</span>
-                                                <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank" class="btn btn-warning pull-right">查看</a>
+                                                <a href="{% url 'account:chapter_list' %}?novel_id={{ novel.id }}" class="btn btn-warning pull-right">查看</a>
                                             </div>
                                         {% else %}
                                             <h5>
@@ -77,7 +77,7 @@
                                             </h5>
                                             <div class="clearfix">
                                                 <a class="btn btn-success pull-left">更新</a>
-                                                <a href="" class="btn btn-warning pull-right">查看</a>
+                                                <a href="{% url 'account:chapter_list' %}?novel_id={{ novel.id }}" class="btn btn-warning pull-right">查看</a>
                                             </div>
                                         {% endif %}
                                     </div>
