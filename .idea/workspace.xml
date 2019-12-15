@@ -69,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/front/src/js/account/novel_list.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+              <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
               <folding>
                 <element signature="n#!!block;n#NovelList#0" />
                 <element signature="e#84#678#0" />
@@ -384,12 +384,12 @@
       <workItem from="1576023620114" duration="19673000" />
       <workItem from="1576117971069" duration="2100000" />
       <workItem from="1576378538191" duration="8243000" />
-      <workItem from="1576393496658" duration="4535000" />
+      <workItem from="1576393496658" duration="4784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="533249000" />
+    <option name="totallyTimeSpent" value="533498000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -926,7 +926,7 @@
     <entry file="file://$PROJECT_DIR$/front/src/js/account/novel_list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
           <folding>
             <element signature="n#!!block;n#NovelList#0" />
             <element signature="e#84#678#0" />

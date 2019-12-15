@@ -65,7 +65,7 @@ NovelList.prototype.listenDeleteNovelEvent = function(){
                 myajax.post({
                     'url': '/account/delete_novel/',
                     'data': {
-                        'novel_id': novelId 
+                        'novel_id': novelId
                     },
                     'success': function(result){
                         if(result['code'] === 200){
