@@ -41,7 +41,7 @@
     supervisord -c supervisor
     
 # 预览
-[点击此处查看网页](119.3.225.205)
+[点击此处查看网页](http://119.3.225.205)
 
 ## 首页
 ![首页](https://github.com/yankangjia/xiaoshuo/raw/master/preview/index.png)
