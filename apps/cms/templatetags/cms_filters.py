@@ -48,7 +48,7 @@ def complete_to_string(value):
     if value:
         return '完本'
     else:
-        return '待更'
+        return '连载'
 
 @register.filter
 def recommend_to_string(value):

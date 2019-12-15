@@ -13,7 +13,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.utils.decorators import method_decorator
 from apps.xsauth.decorators import xs_permission_required,xs_login_required
 from django.views.decorators.http import require_POST
-import os
+import os,time
 
 
 # 首页
@@ -282,12 +282,17 @@ def delete_chapter(request):
 @xs_login_required
 def upload_file(request):
     file = request.FILES.get('file')
-    name = file.name
-    with open(os.path.join(settings.MEDIA_ROOT,name),'wb') as fp:
+    time = datetime.now()
+    extension = file.name.split('.')[-1]
+    dir = time.strftime('%Y\%m\%d')
+    name = time.strftime('%H%M%S%f') + '.' + extension
+    if not os.path.exists(os.path.join(settings.MEDIA_ROOT,dir)):
+        os.makedirs(os.path.join(settings.MEDIA_ROOT,dir))
+    with open(os.path.join(settings.MEDIA_ROOT,dir,name),'wb') as fp:
         for chunk in file.chunks():
             fp.write(chunk)
     # 拼接url     127.0.0.1:8000/media/1.jpg
-    url = request.build_absolute_uri(settings.MEDIA_URL + name)
+    url = request.build_absolute_uri(settings.MEDIA_URL + os.path.join(dir,name))
     return restful.result(data={'url':url})
 
 # 设置推荐

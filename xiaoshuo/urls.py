@@ -20,6 +20,7 @@ urlpatterns = [
     # path('search/', include('haystack.urls')),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns.append(path('__debug__/',include(debug_toolbar.urls)))
+# 调试
+# if settings.DEBUG:
+#     import debug_toolbar
+#     urlpatterns.append(path('__debug__/',include(debug_toolbar.urls)))

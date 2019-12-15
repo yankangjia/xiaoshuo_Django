@@ -11,8 +11,12 @@
         .size-sm {
             font-size: 15px;
         }
+        .base-novel-div {
+            min-width:153px;
+        }
         .thumbnail {
             background: #efffff;
+            min-width:153px;
         }
         .finish {
             font-size: 16px;
@@ -44,7 +48,7 @@
                 <div class="box-body">
                     <div class="row works-group">
                         {% for novel in my_works|slice:'0:6' %}
-                            <div class="base-novel-div col-md-2 text-center" data-novel-id="{{ novel.id }}">
+                            <div class="base-novel-div col-xs-6 col-sm-4 col-md-2 text-center" data-novel-id="{{ novel.id }}">
                                 <div class="thumbnail">
                                     <a href="{% url 'novel:detail' novel_id=novel.id %}">
                                         <img style="width:143px;height:187px;" class="img-thumbnail" src="{{ novel.cover_url }}" alt="">
@@ -65,7 +69,7 @@
                                             </h5>
                                             <div class="clearfix">
                                                 <span class="pull-left finish">已完结</span>
-                                                <a href="" class="btn btn-warning pull-right">查看</a>
+                                                <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank" class="btn btn-warning pull-right">查看</a>
                                             </div>
                                         {% else %}
                                             <h5>
@@ -102,7 +106,7 @@
             <div class="box-body">
                 <div class="row read-group">
                     {% for novel in readed_novels|slice:'0:6' %}
-                        <div class="base-novel-div col-md-2 text-center" data-novel-id="{{ novel.id }}">
+                        <div class="base-novel-div col-xs-6 col-sm-4 col-md-2 text-center" data-novel-id="{{ novel.id }}">
                             <div class="thumbnail">
                                 <a href="{% url 'novel:detail' novel_id=novel.id %}">
                                     <img style="width:150px;" class="img-thumbnail" src="{{ novel.cover_url }}" alt="">
@@ -153,7 +157,7 @@
             <div class="box-body">
                 <div class="row collect-group">
                     {% for novel in collected_novels|slice:'0:6' %}
-                        <div class="base-novel-div col-md-2 text-center" data-novel-id="{{ novel.id }}">
+                        <div class="base-novel-div col-xs-6 col-sm-4 col-md-2 text-center" data-novel-id="{{ novel.id }}">
                             <div class="thumbnail">
                                 <a href="{% url 'novel:detail' novel_id=novel.id %}">
                                     <img src="{{ novel.cover_url }}" style="width: 150px;" class="img-thumbnail" alt="">

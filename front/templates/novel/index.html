@@ -183,7 +183,7 @@
                             {% for novel in new_novels|slice:'0:11' %}
                                 <li>
                                     <span class="novel-cate"><a href="{% url 'novel:index_category' category_name=novel.category_id|get_category_name:'en' %}" target="_blank">「{{ novel.category.name }}」</a></span>
-                                    <span class="novel-name"><a href="{% url 'novel:detail' novel_id=novel.id %}">{{ novel.name|truncate:7 }}</a></span>
+                                    <span class="novel-name"><a href="{% url 'novel:detail' novel_id=novel.id %}">{{ novel.name|truncate:8 }}</a></span>
                                     <span class="novel-author"><a href="#">{{ novel.author.pen_name }}</a></span>
                                 </li>
                             {% endfor %}

@@ -137,8 +137,8 @@
         {% endif %}
         {% if perms.novel.change_novelcategory %}
             <li class="header">分类管理</li>
-            <li><a href="{% url 'cms:category_list' %}"><i class="iconfont icon-category"></i> 分类列表</a></li>
-            <li><a href="{% url 'cms:tag_list' %}"><i class="iconfont icon-tag"></i> 标签列表</a></li>
+            <li><a href="{% url 'cms:category_list' %}"><i class="iconfont icon-category"></i> <span>分类列表</span></a></li>
+            <li><a href="{% url 'cms:tag_list' %}"><i class="iconfont icon-tag"></i> <span>标签列表</span></a></li>
         {% endif %}
         {% if user.is_superuser %}
             <li class="header">权限管理</li>

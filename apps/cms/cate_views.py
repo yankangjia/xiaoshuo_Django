@@ -5,12 +5,13 @@ from .forms import EditNovelCategoryForm
 from django.forms.models import model_to_dict
 from django.contrib.auth.decorators import permission_required
 from django.views.decorators.http import require_POST, require_GET
+from django.db.models import Count
 
 
 # 分类列表
 @permission_required(perm='novel.change_novelcategory',login_url='/')
 def category_list(request):
-    categories = NovelCategory.objects.all()
+    categories = NovelCategory.objects.annotate(novels_num=Count("novels__id"))
     context = {
         'categories': categories,
     }

@@ -49,7 +49,7 @@ class AddStaff(View):
 class EditStaff(View):
     def get(self, request, staff_id):
         user = User.objects.prefetch_related('groups').get(pk=staff_id)
-        groups = Group.objects.all()
+        groups = Group.objects.filter(name__in=['广告','管理'])
         if user.is_staff:
             context = {
                 'staff': user,
