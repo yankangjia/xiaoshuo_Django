@@ -83,15 +83,14 @@ WSGI_APPLICATION = 'xiaoshuo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'xiaoshuo',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'Ykj19971219'
+        'USER': os.environ.get('DJANGO_MYSQL_USER'),
+        'PASSWORD': os.environ.get('DJANGO_MYSQL_PASSWORD')
     }
 }
 
