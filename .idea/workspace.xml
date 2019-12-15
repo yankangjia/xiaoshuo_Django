@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f1400c-2086-4648-9f06-62a6d8d47e7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/nullFile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/account_index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/chapter1.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/chapter2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/chapter_list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/choose_novel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/cms_ad_set.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/cms_banners.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/cms_category_list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/cms_excellent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/cms_index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/cms_novel_list_.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/cms_staffs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/cms_tag_list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/detail1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/detail2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/pub_novel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/whole_novel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preview/works_list.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/account/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/account/author_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/author_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/account/templatetags/author_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/templatetags/author_filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cms/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/novel/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/novel/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/novel/migrations/0007_auto_20191205_1309.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/novel/migrations/0007_auto_20191205_1309.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/novel/migrations/0019_auto_20191209_2231.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/novel/migrations/0019_auto_20191209_2231.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/become_writer.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/become_writer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/chapter_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/chapter_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/choose_novel.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/choose_novel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/my_collect.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/my_collect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/novel_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/novel_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/pub_novel.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/pub_novel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/recently_read.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/recently_read.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/write_chapter.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/write_chapter.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +15,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/templates/account/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="82">
-              <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+              <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supervisor.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/uwsgi.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -75,8 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>my-book</find>
-      <find>novels.0 as novel</find>
       <find>$height</find>
       <find>auth</find>
       <find>auth-group</find>
@@ -105,6 +83,8 @@
       <find>sear</find>
       <find>search</find>
       <find>新书推荐</find>
+      <find>acc</find>
+      <find>account</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -113,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/front/templates/base/auth.html" />
         <option value="$PROJECT_DIR$/front/src/css/novel/whole.scss" />
         <option value="$PROJECT_DIR$/front/src/css/novel/rank.scss" />
         <option value="$PROJECT_DIR$/front/templates/novel/rank.html" />
@@ -164,6 +143,7 @@
         <option value="$PROJECT_DIR$/apps/account/templatetags/author_filter.py" />
         <option value="$PROJECT_DIR$/front/templates/author/choose_novel.html" />
         <option value="$PROJECT_DIR$/apps/account/views.py" />
+        <option value="$PROJECT_DIR$/uwsgi.ini" />
       </list>
     </option>
   </component>
@@ -179,7 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,23 +169,13 @@
             <path>
               <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
               <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="novel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,12 +268,13 @@
       <workItem from="1575948283728" duration="40442000" />
       <workItem from="1576023620114" duration="19673000" />
       <workItem from="1576117971069" duration="2100000" />
-      <workItem from="1576378538191" duration="7028000" />
+      <workItem from="1576378538191" duration="8243000" />
+      <workItem from="1576393496658" duration="2899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="527499000" />
+    <option name="totallyTimeSpent" value="531613000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -319,12 +289,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2375189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24130106" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47868854" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.75113463" visible="true" weight="0.29508197" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75113463" weight="0.29508197" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -348,13 +318,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/supervisor.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/base/auth.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -453,13 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uwsgi.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -645,9 +601,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/2019/12/15/114717101695.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/media/2019/12/15/114717101695.png" />
     <entry file="file://$PROJECT_DIR$/xiaoshuo/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -839,7 +793,21 @@
     <entry file="file://$PROJECT_DIR$/front/templates/account/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
-          <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+          <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervisor.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uwsgi.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
