@@ -74,7 +74,7 @@ class NovelList(View):
             })
         }
         context.update(context_data)
-        return render(request, 'author/novel_list.html', context=context)
+        return render(request, 'account/novel_list.html', context=context)
 
     def get_pagination_data(self, paginator, page_obj, around_count=2):
         current_page = page_obj.number
@@ -108,7 +108,7 @@ class NovelList(View):
 @method_decorator(permission_required(perm='novel.add_novel'),name='dispatch')
 class PubNovel(View):
     def get(self,request):
-        return render(request, 'author/pub_novel.html')
+        return render(request, 'account/pub_novel.html')
     def post(self,request):
         form = NovelForm(request.POST)
         if form.is_valid():
@@ -136,7 +136,7 @@ class EditNovel(View):
             return redirect('account:index')
         categories = NovelCategory.objects.all()
         context['categories'] = categories
-        return render(request, 'author/pub_novel.html', context=context)
+        return render(request, 'account/pub_novel.html', context=context)
 
     def post(self,request):
         novel_id = request.POST.get('novel_id')
@@ -173,7 +173,7 @@ class WriteChapter(View):
         context = {
             'novel': novel,
         }
-        return render(request, 'author/write_chapter.html', context=context)
+        return render(request, 'account/write_chapter.html', context=context)
 
     def post(self,request):
         form = ChapterForm(request.POST)
@@ -224,7 +224,7 @@ class EditChapter(View):
             'chapter': chapter,
             'novel': chapter.novel,
         }
-        return render(request, 'author/write_chapter.html', context=context)
+        return render(request, 'account/write_chapter.html', context=context)
 
     def post(self,request):
         form = ChapterForm(request.POST)
@@ -257,7 +257,7 @@ def choose_novel(request):
         'operate': operate,
         'novels':novels,
     }
-    return render(request,'author/choose_novel.html', context=context)
+    return render(request, 'account/choose_novel.html', context=context)
 
 # 查看章节
 @method_decorator(permission_required(perm='novel.change_novelchapter'),name='dispatch')
@@ -310,7 +310,7 @@ class ChapterList(View):
             })
         }
         context.update(context_data)
-        return render(request, 'author/chapter_list.html', context=context)
+        return render(request, 'account/chapter_list.html', context=context)
 
 
     def get_pagination_data(self, paginator, page_obj, around_count=2):

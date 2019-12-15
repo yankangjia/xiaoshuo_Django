@@ -2,32 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f1400c-2086-4648-9f06-62a6d8d47e7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/images/nullFile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/account_index.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/chapter1.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/chapter2.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/chapter_list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/choose_novel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/cms_ad_set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/cms_banners.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/cms_category_list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/cms_excellent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/cms_index.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/cms_novel_list_.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/cms_staffs.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/cms_tag_list.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/detail1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/detail2.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/index.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/pub_novel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/whole_novel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preview/works_list.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cms/cate_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/cate_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cms/staff_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/staff_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cms/templatetags/cms_filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/templatetags/cms_filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/cms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/common/auth.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/common/auth.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/common/blank_header.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/common/blank_header.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/common/init.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/common/init.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/chapter.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/chapter.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/detail.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/detail.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/index.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/index.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/index_category.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/index_category.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/rank.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/rank.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/search.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/search.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/whole.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/whole.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/css/common/init.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/common/init.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/css/novel/chapter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/novel/chapter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/css/novel/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/novel/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/choose_novel.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/author/choose_novel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/author/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/author/novel_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/author/novel_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/cms/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/cms/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/cms/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/cms/category_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/novel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/novel/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xiaoshuo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaoshuo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xiaoshuo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaoshuo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/author_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/author_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/templatetags/author_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/templatetags/author_filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/cms/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/cms/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/novel/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/novel/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/novel/migrations/0007_auto_20191205_1309.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/novel/migrations/0007_auto_20191205_1309.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/novel/migrations/0019_auto_20191209_2231.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/novel/migrations/0019_auto_20191209_2231.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/become_writer.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/become_writer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/chapter_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/chapter_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/choose_novel.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/choose_novel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/my_collect.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/my_collect.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/novel_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/novel_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/pub_novel.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/pub_novel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/recently_read.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/recently_read.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/author/write_chapter.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/account/write_chapter.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,108 +54,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
+        <entry file="file://$PROJECT_DIR$/front/templates/account/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="287" column="8" selection-start-line="287" selection-start-column="4" selection-end-line="287" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-                <element signature="e#797#902#0" />
-                <element signature="e#807#842#0" />
-                <element signature="e#1035#3823#0" />
-                <element signature="e#1067#2867#0" />
-                <element signature="e#2199#2759#0" />
-                <element signature="e#2561#2748#0" />
-                <element signature="e#2949#3823#0" />
-                <element signature="e#3202#3296#0" />
-                <element signature="e#3446#3550#0" />
-                <element signature="e#3567#3823#0" />
-                <element signature="e#3965#4789#0" />
-                <element signature="e#3996#4344#0" />
-                <element signature="e#4081#4156#0" />
-                <element signature="e#4381#4789#0" />
-                <element signature="e#4452#4716#0" />
-                <element signature="e#4926#5607#0" />
-                <element signature="e#5019#5110#0" />
-                <element signature="e#5142#5233#0" />
-                <element signature="e#5252#5343#0" />
-                <element signature="e#5415#5539#0" />
-                <element signature="e#5749#8391#0" />
-                <element signature="e#5780#7434#0" />
-                <element signature="e#6819#7324#0" />
-                <element signature="e#7130#7313#0" />
-                <element signature="e#7517#8391#0" />
-                <element signature="e#7770#7864#0" />
-                <element signature="e#8014#8118#0" />
-                <element signature="e#8135#8391#0" />
-                <element signature="e#8533#9331#0" />
-                <element signature="e#8564#8823#0" />
-                <element signature="e#8707#8750#0" />
-                <element signature="e#8861#9331#0" />
-                <element signature="e#8934#9258#0" />
-                <element signature="e#9456#9598#0" />
-                <element signature="e#10110#10482#0" />
-                <element signature="e#10167#10411#0" />
-                <element signature="e#10329#10411#0" />
-                <element signature="e#10591#10965#0" />
-                <element signature="e#10648#10893#0" />
-                <element signature="e#10730#10813#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/templates/cms/category_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/templates/novel/chapter.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/css/novel/chapter.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="149" column="22" selection-start-line="149" selection-start-column="22" selection-end-line="149" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/novel/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="134" selection-start-line="17" selection-start-column="134" selection-end-line="17" selection-end-column="134" />
-              <folding>
-                <element signature="e#1133#1273#0" />
-                <element signature="e#1317#1375#0" />
-                <element signature="e#1416#3021#0" />
-                <element signature="e#1839#1898#0" />
-                <element signature="e#1948#2324#0" />
-                <element signature="e#2086#2172#0" />
-                <element signature="e#2369#2741#0" />
-                <element signature="e#2480#2551#0" />
-                <element signature="e#2805#3021#0" />
-                <element signature="e#3062#3153#0" />
-                <element signature="e#3126#3153#0" />
-                <element signature="e#3189#3408#0" />
-                <element signature="e#3386#3408#0" />
-                <element signature="e#3448#3651#0" />
-                <element signature="e#3627#3651#0" />
-                <element signature="e#3697#3894#0" />
-                <element signature="e#3943#4118#0" />
-              </folding>
+            <state relative-caret-position="82">
+              <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -208,7 +123,6 @@
         <option value="$PROJECT_DIR$/front/templates/author/recently_read.html" />
         <option value="$PROJECT_DIR$/front/templates/author/my_collect.html" />
         <option value="$PROJECT_DIR$/front/templates/novel/search.html" />
-        <option value="$PROJECT_DIR$/apps/account/templatetags/author_filter.py" />
         <option value="$PROJECT_DIR$/apps/novel/templatetags/novel_filters.py" />
         <option value="$PROJECT_DIR$/apps/xsauth/forms.py" />
         <option value="$PROJECT_DIR$/apps/xsauth/urls.py" />
@@ -223,7 +137,6 @@
         <option value="$PROJECT_DIR$/front/templates/novel/detail.html" />
         <option value="$PROJECT_DIR$/apps/xsauth/views.py" />
         <option value="$PROJECT_DIR$/front/src/js/auth.js" />
-        <option value="$PROJECT_DIR$/apps/account/views.py" />
         <option value="$PROJECT_DIR$/apps/xsauth/decorators.py" />
         <option value="$PROJECT_DIR$/apps/novel/models.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
@@ -241,7 +154,6 @@
         <option value="$PROJECT_DIR$/xiaoshuo/urls.py" />
         <option value="$PROJECT_DIR$/xiaoshuo/settings.py" />
         <option value="$PROJECT_DIR$/front/templates/author/novel_list.html" />
-        <option value="$PROJECT_DIR$/front/templates/author/choose_novel.html" />
         <option value="$PROJECT_DIR$/apps/cms/templatetags/cms_filters.py" />
         <option value="$PROJECT_DIR$/front/templates/cms/base.html" />
         <option value="$PROJECT_DIR$/apps/cms/cate_views.py" />
@@ -249,6 +161,9 @@
         <option value="$PROJECT_DIR$/apps/cms/staff_views.py" />
         <option value="$PROJECT_DIR$/front/src/css/novel/chapter.scss" />
         <option value="$PROJECT_DIR$/apps/cms/views.py" />
+        <option value="$PROJECT_DIR$/apps/account/templatetags/author_filter.py" />
+        <option value="$PROJECT_DIR$/front/templates/author/choose_novel.html" />
+        <option value="$PROJECT_DIR$/apps/account/views.py" />
       </list>
     </option>
   </component>
@@ -275,51 +190,18 @@
             <path>
               <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
               <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
               <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="novel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
               <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="2019" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="2019" type="462c0819:PsiDirectoryNode" />
-              <item name="12" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-              <item name="2019" type="462c0819:PsiDirectoryNode" />
-              <item name="12" type="462c0819:PsiDirectoryNode" />
-              <item name="15" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
-              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -339,19 +221,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\DjangoProjects\xiaoshuo\front\dist\images" />
-      <recent name="D:\DjangoProjects\xiaoshuo\front\dist\images\novel\detail" />
-      <recent name="D:\DjangoProjects\xiaoshuo\front\dist\images\novel\advertisement" />
-      <recent name="D:\DjangoProjects\xiaoshuo\front\dist\images\novel\banner" />
-      <recent name="D:\DjangoProjects\xiaoshuo\front\src\js\cms" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\DjangoProjects\xiaoshuo\apps\novel" />
       <recent name="D:\DjangoProjects\xiaoshuo\front\templates\search" />
       <recent name="D:\DjangoProjects\xiaoshuo\front\dist\js\account" />
       <recent name="D:\DjangoProjects\xiaoshuo\front\src\js\cms" />
       <recent name="D:\DjangoProjects\xiaoshuo\front\src\js\account" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DjangoProjects\xiaoshuo\front\dist\images" />
+      <recent name="D:\DjangoProjects\xiaoshuo\front\dist\images\novel\detail" />
+      <recent name="D:\DjangoProjects\xiaoshuo\front\dist\images\novel\advertisement" />
+      <recent name="D:\DjangoProjects\xiaoshuo\front\dist\images\novel\banner" />
+      <recent name="D:\DjangoProjects\xiaoshuo\front\src\js\cms" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -382,7 +264,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="" />
+      <option name="host" value="0.0.0.0" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
@@ -417,12 +299,12 @@
       <workItem from="1575948283728" duration="40442000" />
       <workItem from="1576023620114" duration="19673000" />
       <workItem from="1576117971069" duration="2100000" />
-      <workItem from="1576378538191" duration="2994000" />
+      <workItem from="1576378538191" duration="7028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="523465000" />
+    <option name="totallyTimeSpent" value="527499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -435,12 +317,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2375189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.47966102" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.47868854" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.75113463" visible="true" weight="0.29508197" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -465,54 +348,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/novel_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/staffs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/tag_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="49" column="34" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/cms/tag_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/novel/cache_test.html" />
-    <entry file="file://$PROJECT_DIR$/front/templates/author/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/novel/search.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#303#1405#0" />
-            <element signature="e#1414#7217#0" />
-            <element signature="e#9778#10157#0" />
-            <element signature="e#10204#10747#0" />
-            <element signature="e#10795#11280#0" />
-            <element signature="e#11321#11564#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/supervisor.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -603,34 +438,6 @@
           <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/account/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#481#901#0" />
-            <element signature="e#716#838#0" />
-            <element signature="e#961#1247#0" />
-            <element signature="e#1102#1176#0" />
-            <element signature="e#1304#1485#0" />
-            <element signature="e#1364#1417#0" />
-            <element signature="e#1577#2261#0" />
-            <element signature="e#1608#1765#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/account/author_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -731,27 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/account/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/novel/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="249" column="25" selection-start-line="249" selection-start-column="25" selection-end-line="249" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#9442#9771#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/novel/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
@@ -762,13 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xiaoshuo/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Envs/django_env/Lib/site-packages/debug_toolbar/middleware.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -776,28 +555,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/author/novel_list.html">
+    <entry file="file://$PROJECT_DIR$/front/templates/account/novel_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/author/choose_novel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/author/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#4804#7066#0#HTML" />
-            <element signature="e#8062#9826#0#HTML" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -818,23 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="140" column="102" selection-start-line="140" selection-start-column="102" selection-end-line="140" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/templatetags/cms_filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xiaoshuo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="50" column="52" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -901,23 +645,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/cate_views.py">
+    <entry file="file://$PROJECT_DIR$/media/2019/12/15/114717101695.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaoshuo/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1936">
-          <caret line="13" column="58" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/staff_views.py">
+    <entry file="file://$PROJECT_DIR$/xiaoshuo/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="289">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/templatetags/cms_filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
-            <element signature="e#738#1465#0" />
+            <element signature="e#228#1056#0" />
+            <element signature="e#228#429#1" />
+            <element signature="e#473#1025#0" />
+            <element signature="e#1147#1262#0" />
+            <element signature="e#1308#1334#0" />
+            <element signature="e#1388#1447#0" />
+            <element signature="e#1502#1559#0" />
+            <element signature="e#1611#1630#0" />
+            <element signature="e#1675#1698#0" />
           </folding>
         </state>
       </provider>
@@ -929,53 +690,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/novel/templatetags/novel_filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding>
+            <element signature="e#323#945#0" />
+            <element signature="e#362#914#0" />
+            <element signature="e#1021#1224#0" />
+            <element signature="e#1410#1495#0" />
+            <element signature="e#1538#1555#0" />
+            <element signature="e#1603#1749#0" />
+            <element signature="e#1796#2102#0" />
+            <element signature="e#1895#1991#0" />
+            <element signature="e#2010#2102#0" />
+            <element signature="e#2159#2918#0" />
+            <element signature="e#2473#2655#0" />
+            <element signature="e#2553#2623#0" />
+            <element signature="e#2734#2865#0" />
+            <element signature="e#2955#3078#0" />
+            <element signature="e#3114#3237#0" />
+            <element signature="e#3275#3449#0" />
+            <element signature="e#3486#3632#0" />
+            <element signature="e#3699#4628#0" />
+            <element signature="e#3801#4035#0" />
+            <element signature="e#4077#4149#0" />
+            <element signature="e#4228#4374#0" />
+            <element signature="e#4300#4342#0" />
+            <element signature="e#4512#4570#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/account/templatetags/author_filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="20" />
+          <folding>
+            <element signature="e#228#1056#0" />
+            <element signature="e#228#429#1" />
+            <element signature="e#473#1025#0" />
+            <element signature="e#1147#1262#0" />
+            <element signature="e#1308#1334#0" />
+            <element signature="e#1388#1447#0" />
+            <element signature="e#1502#1559#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/account/choose_novel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/cms/staffs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/staff_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#738#1465#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/account/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="99" column="41" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Envs/django_env/Lib/site-packages/django/template/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="942" selection-start-line="942" selection-end-line="942" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/account/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/account/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="65" column="44" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/account/author_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="76" column="39" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="39" />
+          <folding>
+            <element signature="e#2081#2647#0" />
+            <element signature="e#2443#2636#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="-10">
           <caret line="287" column="8" selection-start-line="287" selection-start-column="4" selection-end-line="287" selection-end-column="8" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
-            <element signature="e#797#902#0" />
-            <element signature="e#807#842#0" />
-            <element signature="e#1035#3823#0" />
-            <element signature="e#1067#2867#0" />
-            <element signature="e#2199#2759#0" />
-            <element signature="e#2561#2748#0" />
-            <element signature="e#2949#3823#0" />
-            <element signature="e#3202#3296#0" />
-            <element signature="e#3446#3550#0" />
-            <element signature="e#3567#3823#0" />
-            <element signature="e#3965#4789#0" />
-            <element signature="e#3996#4344#0" />
-            <element signature="e#4081#4156#0" />
-            <element signature="e#4381#4789#0" />
-            <element signature="e#4452#4716#0" />
-            <element signature="e#4926#5607#0" />
-            <element signature="e#5019#5110#0" />
-            <element signature="e#5142#5233#0" />
-            <element signature="e#5252#5343#0" />
-            <element signature="e#5415#5539#0" />
-            <element signature="e#5749#8391#0" />
-            <element signature="e#5780#7434#0" />
-            <element signature="e#6819#7324#0" />
-            <element signature="e#7130#7313#0" />
-            <element signature="e#7517#8391#0" />
-            <element signature="e#7770#7864#0" />
-            <element signature="e#8014#8118#0" />
-            <element signature="e#8135#8391#0" />
-            <element signature="e#8533#9331#0" />
-            <element signature="e#8564#8823#0" />
-            <element signature="e#8707#8750#0" />
-            <element signature="e#8861#9331#0" />
-            <element signature="e#8934#9258#0" />
-            <element signature="e#9456#9598#0" />
-            <element signature="e#10110#10482#0" />
-            <element signature="e#10167#10411#0" />
-            <element signature="e#10329#10411#0" />
-            <element signature="e#10591#10965#0" />
-            <element signature="e#10648#10893#0" />
-            <element signature="e#10730#10813#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/cate_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/novel/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="e#9442#9771#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/account/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="154" column="27" lean-forward="true" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
         </state>
       </provider>
     </entry>

@@ -56,3 +56,10 @@ def recommend_to_string(value):
         return '是'
     else:
         return '否'
+
+@register.filter
+def words_num_filter(value):
+    if isinstance(value,int):
+        return round(value/10000, 2)
+    else:
+        return value

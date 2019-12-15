@@ -1,5 +1,5 @@
-{% extends 'author/base.html' %}
-
+{% extends 'account/base.html' %}
+{% load author_filter %}
 
 {% block title %}
     {% if news %}
@@ -62,7 +62,7 @@
                                             <div class="row">
                                                 <h5 class="col-md-2"><i class="iconfont icon-fenlei"></i> {{ novel.category.name }}</h5>
                                                 <h5 class="col-md-3"><i class="iconfont icon-zhangjiechuti"></i> 当前共{{ novel.chapters_num }}章</h5>
-                                                <h5 class="col-md-3"><i class="iconfont icon-shuzi"></i> 当前共{{ novel.words_num }}字</h5>
+                                                <h5 class="col-md-3"><i class="iconfont icon-shuzi"></i> 当前共{{ novel.words_num|words_num_filter }}万字</h5>
                                             </div>
                                             <span>{{ novel.profile|safe|truncatechars:100 }}</span>
                                         </div>

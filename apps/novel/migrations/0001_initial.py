@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('pub_date', models.DateTimeField(auto_now_add=True)),
                 ('price', models.FloatField()),
                 ('cover_url', models.URLField()),
-                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('account', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'db_table': 'novel',

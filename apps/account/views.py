@@ -20,7 +20,7 @@ def index(request):
         'collected_novels': collected_novels,
         'my_works': my_works
     }
-    return render(request,'author/index.html',context=context)
+    return render(request, 'account/index.html', context=context)
 
 # 最近阅读
 @xs_login_required
@@ -31,7 +31,7 @@ def recently_read(request):
         'novels': novels,
         'collect_novels': collect_novels
     }
-    return render(request,'author/recently_read.html',context=context)
+    return render(request, 'account/recently_read.html', context=context)
 
 # 我的书架
 @xs_login_required
@@ -40,7 +40,7 @@ def my_collect(request):
     context = {
         'collected_novels': collected_novels,
     }
-    return render(request,'author/my_collect.html',context=context)
+    return render(request, 'account/my_collect.html', context=context)
 
 # 成为作家
 @method_decorator(xs_login_required,name='dispatch')
@@ -49,7 +49,7 @@ class BecomeWriter(View):
         if request.user.is_author:
             return redirect(reverse('account:index'))
         else:
-            return render(request,'author/become_writer.html')
+            return render(request, 'account/become_writer.html')
 
     def post(self,request):
         user = request.user
