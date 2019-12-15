@@ -43,7 +43,8 @@
 # 预览
 
 ## 首页
-![首页](http://119.3.225.205/media/preview/index.png)
+![首页](https://github.com/yankangjia/xiaoshuo/raw/master/preview/index.png)
+
 ### 全部作品
 ![全部作品](http://119.3.225.205/media/preview/whole_novel.png)
 ### 小说详情
