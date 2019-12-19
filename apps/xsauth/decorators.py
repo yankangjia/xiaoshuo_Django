@@ -47,7 +47,7 @@ def xs_login_required(func):
             if request.is_ajax():
                 return restful.unauth(message="请先登录！")
             else:
-                previous = request.META['HTTP_REFERER']
+                previous = request.META['HTTP_REFERER'].split('?')[0]
                 current = request.path
                 current_query_string = request.META['QUERY_STRING']
                 redirect_url = '%s?next=%s?%s' % (previous,current,current_query_string)

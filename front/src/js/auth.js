@@ -202,7 +202,6 @@ Auth.prototype.listenSignUpEvent = function(){
 // 根据查询字符串判断是否需要弹出登录框  该方法需要在“监听模态对话框显示与隐藏事件”之后
 Auth.prototype.needAuth = function(){
     var self = this;
-    console.log(111);
     //获取URL查询字符串参数值，可以抽取每个参数和参数值
     var queryString = function(){
         var q = location.search.substring(1);	//获取查询字符串
@@ -215,7 +214,6 @@ Auth.prototype.needAuth = function(){
             var v1 = a[i].substring(0, n);
             var v2 = a[i].substring(n + 1);
             o[v1] = unescape(v2);				//以名/值对的形式存储在对象中
-            console.log(o[v1])
         }
         return o;
     };
