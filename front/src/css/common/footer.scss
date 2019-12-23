@@ -1,4 +1,7 @@
+@import 'constants.scss';
+
 footer {
+    min-width: $pageWidth;
     margin-top: 50px;
     padding: 40px 0;
     background: #eeeeee;

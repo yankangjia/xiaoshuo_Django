@@ -124,21 +124,21 @@
                         <div class="left-header">
                             <h2>本周强推</h2>
                         </div>
-                            <ul>
-                                {% for novel in recommend_novels|slice:'6:17' %}
-                                    <li>
-                                        <span class="novel-cate">
-                                            <a href="{% url 'novel:index_category' category_name=novel.category_id|get_category_name:'en' %}" target="_blank">「{{ novel.category.name }}」</a>
-                                        </span>
-                                        <span class="novel-name">
-                                            <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name|truncate:'8' }}</a>
-                                        </span>
-                                        <span class="novel-author">
-                                            <a href="#" target="_blank">{{ novel.author.pen_name }}</a>
-                                        </span>
-                                    </li>
-                                {% endfor %}
-                            </ul>
+                        <ul>
+                            {% for novel in recommend_novels|slice:'6:17' %}
+                                <li>
+                                    <span class="novel-cate">
+                                        <a href="{% url 'novel:index_category' category_name=novel.category_id|get_category_name:'en' %}" target="_blank">「{{ novel.category.name }}」</a>
+                                    </span>
+                                    <span class="novel-name">
+                                        <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">{{ novel.name|truncate:'8' }}</a>
+                                    </span>
+                                    <span class="novel-author">
+                                        <a href="#" target="_blank">{{ novel.author.pen_name }}</a>
+                                    </span>
+                                </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                     <!-- 编辑推荐 -->
                     <div class="recommend-body">
