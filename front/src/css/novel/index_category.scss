@@ -102,6 +102,7 @@
 }
 
 header {
+    min-width: $pageWidth;
     .header-top {
       $height: 42px;
       width: 100%;

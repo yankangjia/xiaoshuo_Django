@@ -136,7 +136,7 @@
                                     </div>
                                     <div class="novel-img-box">
                                         <a href="{% url 'novel:detail' novel_id=novel.id %}">
-                                            <img src="https://bookcover.yuewen.com/qdbimg/349573/1016811796/90" alt="">
+                                            <img src="{{ novel.cover_url }}" alt="">
                                         </a>
                                     </div>
                                 </li>
@@ -172,7 +172,7 @@
                     <div class="line line1"></div>
                     <div class="line line2"></div>
                     <ul>
-                        {% for novel in new_novels|slice:'10:22' %}
+                        {% for novel in new_novels|slice:'10:19' %}
                             <li>
                                 <div class="novel-img">
                                     <a href="{% url 'novel:detail' novel_id=novel.id %}">
@@ -216,7 +216,7 @@
                                 </div>
                                 <div class="novel-img-box">
                                     <a href="{% url 'novel:detail' novel_id=novel.id %}" target="_blank">
-                                        <img src="https://bookcover.yuewen.com/qdbimg/349573/1016811796/90" alt="">
+                                        <img src="{{ novel.cover_url }}" alt="">
                                     </a>
                                 </div>
                             </li>
