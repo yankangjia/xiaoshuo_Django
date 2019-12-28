@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f1400c-2086-4648-9f06-62a6d8d47e7b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/front/src/css/common/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/common/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/novel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/novel/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/common/auth.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/common/auth.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/common/blank_header.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/common/blank_header.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/common/init.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/common/init.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/chapter.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/chapter.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/detail.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/detail.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/index.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/index.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/index_category.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/index_category.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/rank.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/rank.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/search.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/search.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/whole.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/whole.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/common/auth.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/common/auth.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/common/init.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/common/init.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/novel/chapter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/novel/chapter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/novel/detail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/novel/detail.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/templates/base/front_base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-37">
-              <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+            <state>
+              <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
               <folding>
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#if#2;n#!!top" />
@@ -29,11 +42,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/src/css/common/footer.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="255">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/css/novel/detail.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/front/src/css/common/auth.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/css/common/blank_header.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+              <folding>
+                <element signature="e#122#876#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/templates/novel/index_category.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="2295">
               <caret line="135" column="36" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -58,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/templates/novel/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
+            <state relative-caret-position="3281">
               <caret line="193" column="40" selection-start-line="193" selection-start-column="40" selection-end-line="193" selection-end-column="40" />
               <folding>
                 <element signature="e#80#97#0#DjangoTemplate" />
@@ -125,7 +168,7 @@
         <entry file="file://$PROJECT_DIR$/front/src/css/novel/index.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+              <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
               <folding>
                 <element signature="e#91#278#0" />
                 <element signature="e#303#1406#0" />
@@ -194,9 +237,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/xsauth/forms.py" />
-        <option value="$PROJECT_DIR$/apps/xsauth/urls.py" />
-        <option value="$PROJECT_DIR$/front/templates/author/become_writer.html" />
         <option value="$PROJECT_DIR$/front/templates/author/chapter_list.html" />
         <option value="$PROJECT_DIR$/front/templates/cms/add_staff.html" />
         <option value="$PROJECT_DIR$/front/templates/cms/chapter_list.html" />
@@ -214,7 +254,6 @@
         <option value="$PROJECT_DIR$/front/templates/base/black_header.html" />
         <option value="$PROJECT_DIR$/front/templates/novel/chapter.html" />
         <option value="$PROJECT_DIR$/apps/novel/urls.py" />
-        <option value="$PROJECT_DIR$/front/src/css/common/init.scss" />
         <option value="$PROJECT_DIR$/front/templates/author/index.html" />
         <option value="$PROJECT_DIR$/xiaoshuo/urls.py" />
         <option value="$PROJECT_DIR$/front/templates/author/novel_list.html" />
@@ -223,7 +262,6 @@
         <option value="$PROJECT_DIR$/apps/cms/cate_views.py" />
         <option value="$PROJECT_DIR$/front/templates/cms/category_list.html" />
         <option value="$PROJECT_DIR$/apps/cms/staff_views.py" />
-        <option value="$PROJECT_DIR$/front/src/css/novel/chapter.scss" />
         <option value="$PROJECT_DIR$/apps/cms/views.py" />
         <option value="$PROJECT_DIR$/apps/account/templatetags/author_filter.py" />
         <option value="$PROJECT_DIR$/front/templates/author/choose_novel.html" />
@@ -245,6 +283,11 @@
         <option value="$PROJECT_DIR$/front/templates/novel/index_category.html" />
         <option value="$PROJECT_DIR$/front/templates/novel/index.html" />
         <option value="$PROJECT_DIR$/front/src/css/common/footer.scss" />
+        <option value="$PROJECT_DIR$/front/src/css/common/blank_header.scss" />
+        <option value="$PROJECT_DIR$/front/src/css/novel/chapter.scss" />
+        <option value="$PROJECT_DIR$/front/src/css/common/init.scss" />
+        <option value="$PROJECT_DIR$/front/src/css/novel/detail.scss" />
+        <option value="$PROJECT_DIR$/front/src/css/common/auth.scss" />
       </list>
     </option>
   </component>
@@ -260,7 +303,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,6 +361,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,12 +462,16 @@
       <workItem from="1576565708820" duration="2942000" />
       <workItem from="1576633601578" duration="1417000" />
       <workItem from="1576763293644" duration="1711000" />
-      <workItem from="1577106023753" duration="3788000" />
+      <workItem from="1577106023753" duration="5589000" />
+      <workItem from="1577180964990" duration="111000" />
+      <workItem from="1577182071630" duration="41000" />
+      <workItem from="1577182140805" duration="44000" />
+      <workItem from="1577541675458" duration="2259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="550933000" />
+    <option name="totallyTimeSpent" value="555189000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,12 +486,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2602118" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47868854" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75113463" visible="true" weight="0.36065573" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75113463" visible="true" weight="0.3590164" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -468,54 +515,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/front/templates/novel/chapter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/novel/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="134" selection-start-line="17" selection-start-column="134" selection-end-line="17" selection-end-column="134" />
-          <folding>
-            <element signature="e#1133#1273#0" />
-            <element signature="e#1317#1375#0" />
-            <element signature="e#1416#3021#0" />
-            <element signature="e#1839#1898#0" />
-            <element signature="e#1948#2324#0" />
-            <element signature="e#2086#2172#0" />
-            <element signature="e#2369#2741#0" />
-            <element signature="e#2480#2551#0" />
-            <element signature="e#2805#3021#0" />
-            <element signature="e#3062#3153#0" />
-            <element signature="e#3126#3153#0" />
-            <element signature="e#3189#3408#0" />
-            <element signature="e#3386#3408#0" />
-            <element signature="e#3448#3651#0" />
-            <element signature="e#3627#3651#0" />
-            <element signature="e#3697#3894#0" />
-            <element signature="e#3943#4118#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/novel/chapter.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="149" column="22" selection-start-line="149" selection-start-column="22" selection-end-line="149" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/2019/12/15/114717101695.png" />
-    <entry file="file://$PROJECT_DIR$/xiaoshuo/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -941,9 +940,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/base/front_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#if#2;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/templates/novel/index_category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="135" column="36" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#11797#11839#0#DjangoTemplate" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/novel/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
+        <state relative-caret-position="3281">
           <caret line="193" column="40" selection-start-line="193" selection-start-column="40" selection-end-line="193" selection-end-column="40" />
           <folding>
             <element signature="e#80#97#0#DjangoTemplate" />
@@ -1005,39 +1030,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/base/front_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding>
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#if#2;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/css/novel/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+          <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
           <folding>
             <element signature="e#91#278#0" />
             <element signature="e#303#1406#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/templates/novel/index_category.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="135" column="36" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#0;n#ul#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#11797#11839#0#DjangoTemplate" />
           </folding>
         </state>
       </provider>
@@ -1049,10 +1048,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/common/blank_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding>
+            <element signature="e#122#876#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/css/common/footer.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        <state relative-caret-position="255">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/common/init.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/novel/chapter.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="202" column="14" lean-forward="true" selection-start-line="202" selection-start-column="14" selection-end-line="202" selection-end-column="14" />
+          <folding>
+            <element signature="e#172#971#0" />
+            <element signature="e#980#3576#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/novel/detail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/common/auth.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
         </state>
       </provider>
     </entry>

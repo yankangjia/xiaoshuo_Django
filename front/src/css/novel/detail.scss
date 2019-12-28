@@ -2,6 +2,7 @@
 @import '../common/constants.scss';
 
 header {
+  min-width: 1200px;
   height: 42px;
   width: 100%;
   background: #545454;
@@ -9,10 +10,12 @@ header {
   @import '../common/blank_header.scss';
 }
 .main {
+  min-width: 1200px;
   width: 100%;
   // 背景图片
   .background {
     height: 350px;
+    min-width:1200px;
     width: 100%;
     background-size: cover;
     background: url("../../images/novel/detail/detail_back.jpg");

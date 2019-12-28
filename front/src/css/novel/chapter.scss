@@ -54,6 +54,7 @@ body{
 }
 
 header {
+  min-width: 1200px;
   $height: 60px;
   width: 100%;
   height: $height;
@@ -198,6 +199,8 @@ header {
 }
 
 .main {
+  min-width: 1200px;
+  width: 100%;
   $pageWidth: 798px;
   $backgroundColor: #f8f3e9;
   .wrapper {

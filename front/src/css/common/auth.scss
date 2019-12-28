@@ -21,7 +21,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -$authWrapperHeight/2;
+        margin-top: -$authWrapperHeight/2 + 30px;
         margin-left: -$authWrapperWidth/2;
         .close-wrapper{
             width: 100%;
