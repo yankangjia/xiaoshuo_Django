@@ -25,7 +25,7 @@ SECRET_KEY = 'zb-8g!fm)7ibai&#mke8b5i+5csx83)ez^m(ypr07=_yr4$+8p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['119.3.225.205', '127.0.0.1']
+ALLOWED_HOSTS = ['119.3.225.205', 'www.ykjzone.com', '127.0.0.1']
 
 AUTH_USER_MODEL = 'xsauth.User'
 
