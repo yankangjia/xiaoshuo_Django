@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36f1400c-2086-4648-9f06-62a6d8d47e7b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/novel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/novel/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xiaoshuo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaoshuo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/dist/css/novel/index.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/dist/css/novel/index.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/css/novel/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/css/novel/index.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,13 +21,22 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/front/templates/novel/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="346">
+                <state relative-caret-position="589">
                   <caret line="268" column="72" selection-start-line="268" selection-start-column="72" selection-end-line="268" selection-end-column="72" />
                   <folding>
                     <element signature="e#80#97#0#DjangoTemplate" />
                     <element signature="e#126#142#0#DjangoTemplate" />
                     <element signature="e#715#754#0#DjangoTemplate" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" selection-start-line="5" selection-end-line="5" />
                 </state>
               </provider>
             </entry>
@@ -42,12 +48,21 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/front/src/css/novel/index.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-120">
-                  <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+                <state relative-caret-position="184">
+                  <caret line="789" column="54" lean-forward="true" selection-start-line="789" selection-start-column="54" selection-end-line="789" selection-end-column="54" />
                   <folding>
                     <element signature="e#91#278#0" />
                     <element signature="e#303#1406#0" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/front/dist/css/novel/index.min.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="163">
+                  <caret column="19803" selection-start-column="19803" selection-end-column="19803" />
                 </state>
               </provider>
             </entry>
@@ -67,8 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>novel-profile</find>
-      <find>path-wrapper</find>
       <find>rank</find>
       <find>analyzer=ChineseAnalyzer()</find>
       <find>search-text</find>
@@ -97,6 +110,8 @@
       <find>9</find>
       <find>cover</find>
       <find>ALLOWED_HOSTS</find>
+      <find>novel-info</find>
+      <find>alone-two</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,7 +161,6 @@
         <option value="$PROJECT_DIR$/front/src/css/novel/rank.scss" />
         <option value="$PROJECT_DIR$/front/src/css/novel/whole.scss" />
         <option value="$PROJECT_DIR$/front/src/css/novel/index_category.scss" />
-        <option value="$PROJECT_DIR$/front/src/css/novel/index.scss" />
         <option value="$PROJECT_DIR$/front/templates/novel/index_category.html" />
         <option value="$PROJECT_DIR$/front/src/css/common/footer.scss" />
         <option value="$PROJECT_DIR$/front/src/css/common/blank_header.scss" />
@@ -156,6 +170,7 @@
         <option value="$PROJECT_DIR$/front/src/css/common/auth.scss" />
         <option value="$PROJECT_DIR$/xiaoshuo/settings.py" />
         <option value="$PROJECT_DIR$/front/templates/novel/index.html" />
+        <option value="$PROJECT_DIR$/front/src/css/novel/index.scss" />
       </list>
     </option>
   </component>
@@ -182,6 +197,27 @@
               <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
               <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaoshuo" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="novel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xiaoshuo" type="b2602c69:ProjectViewProjectNode" />
@@ -333,12 +369,12 @@
       <workItem from="1585107958683" duration="681000" />
       <workItem from="1585297203387" duration="35000" />
       <workItem from="1589513319677" duration="1919000" />
-      <workItem from="1589726888854" duration="1982000" />
+      <workItem from="1589726888854" duration="3018000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="565179000" />
+    <option name="totallyTimeSpent" value="566215000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -353,12 +389,12 @@
     <frame x="-8" y="-8" width="1382" height="750" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23298033" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23298033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.47868854" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.75113463" visible="true" weight="0.22077923" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75113463" visible="true" weight="0.22077923" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -382,24 +418,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/cms/templatetags/cms_filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-          <folding>
-            <element signature="e#228#1056#0" />
-            <element signature="e#228#429#1" />
-            <element signature="e#473#1025#0" />
-            <element signature="e#1147#1262#0" />
-            <element signature="e#1308#1334#0" />
-            <element signature="e#1388#1447#0" />
-            <element signature="e#1502#1559#0" />
-            <element signature="e#1611#1630#0" />
-            <element signature="e#1675#1698#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/cms/category_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -882,25 +900,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/css/novel/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
-          <folding>
-            <element signature="e#91#278#0" />
-            <element signature="e#303#1406#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/templates/novel/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
+        <state relative-caret-position="589">
           <caret line="268" column="72" selection-start-line="268" selection-start-column="72" selection-end-line="268" selection-end-column="72" />
           <folding>
             <element signature="e#80#97#0#DjangoTemplate" />
             <element signature="e#126#142#0#DjangoTemplate" />
             <element signature="e#715#754#0#DjangoTemplate" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/dist/css/novel/index.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret column="19803" selection-start-column="19803" selection-end-column="19803" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/css/novel/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="789" column="54" lean-forward="true" selection-start-line="789" selection-start-column="54" selection-end-line="789" selection-end-column="54" />
+          <folding>
+            <element signature="e#91#278#0" />
+            <element signature="e#303#1406#0" />
           </folding>
         </state>
       </provider>
