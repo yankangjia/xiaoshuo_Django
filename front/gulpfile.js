@@ -87,5 +87,5 @@ gulp.task("bs",function () {
 
 
 // 执行gulp server开启服务器
-// gulp.task("default",['bs','watch']);
-gulp.task("default",['watch']);
+gulp.task("default",['bs','watch']);
+// gulp.task("default",['watch']);
