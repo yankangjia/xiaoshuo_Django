@@ -1,6 +1,6 @@
 # Django xiaoshuo
 #### 这是一个django后端框架开发的小说网站（仿照起点中文网，参照了其前端布局）
-#### [预览](http://www.ykjzone.com:8000)
+#### [预览](http://www.ykjzone.com:7000)
 ## 主要功能
 #### 首页
 + 小说 详情 章节 目录 排行榜
@@ -41,7 +41,7 @@
     supervisord -c supervisor
     
 # 预览
-[点击此处查看网页](http://www.ykjzone.com:8000)
+[点击此处查看网页](http://www.ykjzone.com:7000)
 
 ## 首页
 ![首页](https://github.com/yankangjia/xiaoshuo/raw/master/preview/index.png)
