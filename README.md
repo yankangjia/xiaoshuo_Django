@@ -4,12 +4,15 @@
 ## 主要功能
 #### 首页
 + 小说 详情 章节 目录 排行榜
-#### 个人中心
+#### 个人中心 
 + 最近阅读 我的收藏 我的作品 发布 编辑 删除 连载/完本
-#### CMS后台管理
+#### CMS后台管理 /cms
 + 分类 标签 广告 推荐小说
 #### 账号
 + 注册/登录
+
+## 数据库表结构和数据
+    下载链接: https://pan.baidu.com/s/1otQrEfmebaycbMS96Or7xg?pwd=amxe 提取码: amxe 复制这段内容后打开百度网盘手机App，操作更方便哦
 
 ## 运行环境
 ### Ubuntu + uwsgi + nginx + supervisor
